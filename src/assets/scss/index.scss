@@ -1,0 +1,37 @@
+@import './common/reset';
+
+@font-face {
+    font-family: 'ChosunSg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+    font-weight: normal; font-style: normal;
+}
+
+html{
+    font-size: 10px; 
+}
+
+body{
+    overflow-x: hidden; box-sizing: border-box;
+    font-family: 'ChosunSg'; font-size: 1rem;
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #0006;
+        border: 4px solid transparent;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: #ddd
+    }
+    &.dark{
+        background: #323232;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.pageWrap{
+    min-height: calc(100vh - 14rem);
+}
