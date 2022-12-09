@@ -39,8 +39,8 @@ header{
                     }
                     a{
                         display: block;
-                        &.router-link-active{
-                            span::after{
+                        :global &.active{
+                            &::after{
                                 left: 0; width: 100%;
                             }
                         }
@@ -89,9 +89,6 @@ header{
                     }
                 }
             }
-            .xi-close{
-                color: #fff;
-            } 
         }
     }
     header{
@@ -132,7 +129,7 @@ header{
             .dark{
                 display: block;
             }
-            .xi-close{
+            :global .xi-close{
                 color: #000;
             } 
         }

@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Style from '../../assets/scss/components/common/HackerHeader.module.scss';
 
 const HackerHeader = () => {
+	const [isCheck, setIsCheck] = useState(false);
+
+	const onClickOffBar = useCallback(() => {
+		setIsCheck(false);
+	}, []);
+
+	const onClickBars = useCallback(() => {
+		setIsCheck(!isCheck);
+	}, [isCheck]);
+
 	return (
 		<header>
 			<div className={Style.headerWrap}>
@@ -11,31 +21,36 @@ const HackerHeader = () => {
 						<span>Hacker News</span>
 					</Link>
 				</h1>
-				<nav>
+				{/*  :class="{ open: isCheck }" */}
+				<nav className={isCheck ? Style.open : ''}>
 					<ul>
-						<li>
+						<li onClick={onClickOffBar}>
 							<NavLink to="/news">
 								<span>NEWS</span>
 							</NavLink>
 						</li>
-						<li>
+						<li onClick={onClickOffBar}>
 							<NavLink to="/ask">
 								<span>ASK</span>
 							</NavLink>
 						</li>
-						<li>
+						<li onClick={onClickOffBar}>
 							<NavLink to="/jobs">
 								<span>JOBS</span>
 							</NavLink>
 						</li>
-						<li>
+						<li onClick={onClickOffBar}>
 							<NavLink to="/show">
 								<span>SHOW</span>
 							</NavLink>
 						</li>
 					</ul>
 				</nav>
-				<button className={Style.wholeMenu} />
+				{/* :class="{ 'xi-close': isCheck, 'xi-bars': !isCheck }" */}
+				<button
+					className={`${Style.wholeMenu} ${isCheck ? 'xi-close' : 'xi-bars'}`}
+					onClick={onClickBars}
+				/>
 			</div>
 		</header>
 	);
