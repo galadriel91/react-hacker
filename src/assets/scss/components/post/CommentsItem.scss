@@ -1,0 +1,64 @@
+body.dark{
+    .innerInfo{
+        .arrow{
+            color: #afafaf;
+        }
+        border: 2px solid #fff;
+        .userInfo{
+            p{
+                color: #fff;
+            }
+            div{
+                a{
+                    color: #afafaf;
+                    &:hover{
+                        color: #fff
+                    }
+                }
+                span{
+                    color: #888;
+                }
+            }
+        }
+        .content{
+            color: #afafaf;
+        }
+    }
+}
+
+.innerContainer{
+    .innerInfo{
+        .arrow{
+            font-size: 2rem; color: #000;
+        }
+        margin:1rem 0 ; padding: 1rem; box-sizing: border-box;
+        border: 2px solid #999; border-radius: .5rem;
+        .userInfo{
+            display: flex; align-items: center;
+            p{
+                font-size: 5rem; color: #000;
+            }
+            div{
+                margin-left: 1rem;
+                a{
+                    display: inline-block; margin-bottom: .3rem;
+                    font-size: 1.6rem; font-weight: bold; color: #000; transition: all .5s;
+                    &:hover{
+                        color: #42b883;
+                    }
+                }
+                span{
+                    font-size: 1.4rem; font-weight: bold; color: #999;
+                    display: block;
+                }
+            }
+        }
+        .content{
+            margin: 1rem 0 0 1rem;
+            font-size: 1.6rem; color: #000; font-weight: bold;
+        }
+    }
+    .innerComment{
+        margin-left: 1rem;
+    }
+}

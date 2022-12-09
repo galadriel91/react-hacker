@@ -1,0 +1,15 @@
+body.dark{
+    a{
+        color: #afafaf;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+a{
+    transition: all .5s;
+    &:hover{
+        color: #42b883;
+    }
+}

@@ -1,0 +1,28 @@
+body.dark{
+    .commentWrap{
+        div{
+            color: #fff;
+        }
+    }
+}
+
+
+.commentWrap{
+    margin: 5rem 0;
+    div{
+        display: flex; color: #000; align-items: center;
+        h2{
+            font-size: 2rem; margin-right: .5rem;
+        }
+        span{
+            font-size: 1.8rem; font-weight: bold;
+        }
+    }
+    
+}
+
+@media all and (max-width:1220px) {
+    .commentWrap{
+        padding: 0 2.5rem;
+    }
+}

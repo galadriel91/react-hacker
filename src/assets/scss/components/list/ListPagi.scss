@@ -1,0 +1,45 @@
+body.dark{
+    div{
+        background: #323232;
+        ul{
+            li{
+                a{
+                    color: #AFAFAF;
+                    &.active{
+                        color: #e3e3e3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+div{
+    height: 5rem; background: #fff;
+    ul{
+        height: 100%; display: flex; align-items: center; justify-content: center;
+        li{
+            a{
+                display: block; line-height: 5rem; margin: 0 1rem;
+                font-size: 1.6rem; font-weight: bold; color: #000; cursor: pointer;
+                &.active{
+                    color: #00A19D;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:500px) {
+    div{
+        height: 4rem;
+        ul{
+            li{
+                a{
+                    line-height: 4rem; font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

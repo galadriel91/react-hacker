@@ -1,0 +1,35 @@
+body.dark{
+    div{
+        background: #323232; color: #AFAFAF;
+        &:hover{
+            background: #000; color: #fff;
+        }
+    }
+}
+
+div{
+    width: 100%; height: 3rem; background: #fff; border: 1px solid #999; border-top: none;
+    font-size: 1.8rem; color: #000; font-weight: bold; text-align: center; line-height: 3rem;
+    cursor: pointer; transition: all .5s; display: none; box-sizing: border-box;
+    &:hover{
+        background: #f7f7f7;
+    }
+    &.on{
+        display: block;
+    }
+    &.show{
+        border-top: 1px solid #999;
+    }
+}
+
+@media all and (max-width:900px) {
+  div{
+      font-size: 1.6rem;
+  }
+}
+
+@media all and (max-width:500px) {
+    div{
+        height: 2.5rem; font-size: 1.4rem; line-height: 2.5rem;
+    }
+  }

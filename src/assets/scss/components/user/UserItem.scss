@@ -1,0 +1,85 @@
+body.dark{
+    .userWrap{
+        .xi-user-address{
+            color: #fff;
+        }
+        .userInfo{
+            h4{
+                color: #fff;
+            }
+            p{
+                color: #afafaf;
+            }
+            span{
+                color: #afafaf;
+            }
+        }
+    }
+    .userDesc{
+        h3{
+            color: #fff;
+        }
+        div{
+            color: #afafaf;
+        }
+    }
+}
+
+
+.userWrap{
+    padding-top: 2rem; display: flex; align-items: center;
+    .xi-user-address{
+        font-size: 10rem; color: #777; margin-left: -1rem;
+    }
+    .userInfo{
+        h4{
+            font-size: 1.8rem; color: #000;
+        }
+        p{
+            font-size: 1.6rem; color: #666; font-weight: bold;
+        }
+        span{
+            display: inline-block; margin: .5rem 0;
+            font-size: 1.6rem; color: #444; font-weight: bold;
+        }
+    }
+}
+.userDesc{
+    margin:1rem 0 0 .5rem; font-weight: bold;
+    h3{
+        font-size: 1.8rem ; color: #000;
+    }
+    div{
+        margin-top: 1rem;
+        font-size: 1.5rem; color: #777; line-height: 2.2rem;
+    }
+}
+
+@media all and (max-width:1220px) {
+    .userWrap{
+        .xi-user-address{
+            margin-left: 1.5rem;
+        }
+        .userInfo{
+            h4{
+                font-size: 1.6rem; 
+            }
+            p{
+                font-size: 1.5rem; 
+            }
+            span{
+                margin: .7rem 0;
+                font-size: 1.5rem; 
+            }
+        }
+    }
+    .userDesc{
+        margin:1rem 0 0 0; padding: 0 3rem; box-sizing: border-box;
+        h3{
+            font-size: 1.8rem ; 
+        }
+        div{
+            font-size: 1.5rem; line-height: 2.2rem;
+        }
+    }
+}

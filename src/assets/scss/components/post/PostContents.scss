@@ -1,0 +1,35 @@
+body.dark{
+    .itemWrap{
+        h1{
+            color: #fff;
+        }
+        div{
+            color: #afafaf;
+        }
+    }
+}
+
+
+.itemWrap{
+    box-sizing: border-box;
+    h1{
+        margin-top: 1rem;
+        font-size: 2.5rem; color: #000;
+    }
+    div{
+        margin-top: 1rem;
+        font-size: 1.5rem; font-weight: bold; color: #777; line-height: 2.2rem;
+    }
+}
+
+@media all and (max-width:1220px) {
+    .itemWrap{
+        padding: 0 2.5rem;
+        h1{
+            font-size: 2rem;
+        }
+        div{
+            font-size: 1.4rem;
+        }
+    }
+}
