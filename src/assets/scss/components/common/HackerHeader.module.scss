@@ -7,7 +7,8 @@ body.dark{
 
 header{
     position: sticky; left: 0; top: 0; z-index: 9999;
-    height: 6rem; background: #00A19D;
+    height: 6rem; background: #5684FD;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)) !important;
     .headerWrap{
         display: flex; justify-content: space-between; align-items: center;
         margin: 0 auto; width: 120rem; height: 100%;
