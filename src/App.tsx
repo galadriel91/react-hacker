@@ -4,6 +4,7 @@ import HackerHeader from './components/common/HackerHeader';
 import HackerFooter from './components/common/HackerFooter';
 import ListPage from './pages/ListPage';
 import UserPage from './pages/UserPage';
+import PostPage from './pages/PostPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
 					<Route path="/jobs" element={<ListPage />} />
 					<Route path="/show" element={<ListPage />} />
 					<Route path="/user/:id" element={<UserPage />} />
+					<Route path="/post/:id" element={<PostPage />} />
 				</Routes>
 			</div>
 			<HackerFooter />

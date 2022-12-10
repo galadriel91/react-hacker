@@ -8,7 +8,7 @@ type ItemProps = {
 };
 const UserItem = ({ item }: ItemProps) => {
 	const isUserItems = (typeOfProp: UserItems | PostsItem): typeOfProp is UserItems => {
-		return 'about' in typeOfProp;
+		return 'karma' in typeOfProp;
 	};
 
 	return (
@@ -26,8 +26,8 @@ const UserItem = ({ item }: ItemProps) => {
 						<h4>
 							<Link to={`/user/${item.user}`}>User : {item.user}</Link>
 						</h4>
-						<p>Posted : {item.time_ago}</p>
-						<span>Points : {item.points}</span>
+						<span>Posted : {item.time_ago}</span>
+						<p>Points : {item.points}</p>
 					</div>
 				)}
 			</div>

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ListItems, PostsItem, UserItems } from './types';
-import { FETCH_LIST, FETCH_USER } from './sync';
+import { FETCH_LIST, FETCH_USER, FETCH_POST } from './sync';
 
 export const itemSlice = createSlice({
 	name: 'item',
@@ -26,13 +26,13 @@ export const itemSlice = createSlice({
 			// state.isLoading = false;
 			state.user = action.payload;
 		});
-		// builder.addCase(FETCH_POST.pending, (state, action) => {
-		// 	state.isLoading = true;
-		// });
-		// builder.addCase(FETCH_POST.fulfilled, (state, action) => {
-		// 	state.isLoading = false;
-		// 	state.posts = action.payload;
-		// });
+		builder.addCase(FETCH_POST.pending, (state, action) => {
+			// state.isLoading = true;
+		});
+		builder.addCase(FETCH_POST.fulfilled, (state, action) => {
+			// state.isLoading = false;
+			state.posts = action.payload;
+		});
 	},
 });
 

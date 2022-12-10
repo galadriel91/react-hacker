@@ -12,8 +12,8 @@ const fetchUserItem = (userId: string) => {
 	return instance.get(`user/${userId}.json`);
 };
 
-// const fetchPostItem = itemId => {
-// 	return instance.get(`item/${itemId}.json`);
-// };
+const fetchPostItem = (itemId: string) => {
+	return instance.get(`item/${itemId}.json`);
+};
 
-export { fetchListItem, fetchUserItem };
+export { fetchListItem, fetchUserItem, fetchPostItem };
