@@ -3,6 +3,7 @@ import { FETCH_POST } from '../store/features/sync';
 import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import UserItem from '../components/user/UserItem';
+import PostContents from '../components/post/PostContents';
 import Style from '../assets/scss/pages/PostPage.module.scss';
 
 const PostPage = () => {
@@ -18,12 +19,7 @@ const PostPage = () => {
 	return (
 		<div className={Style.itemContainer}>
 			<UserItem item={post} />
-			<div className={Style.itemWrap}>
-				<h1>{post.title}</h1>
-				<div>
-					<p dangerouslySetInnerHTML={{ __html: post.content }} />
-				</div>
-			</div>
+			<PostContents item={post} />
 		</div>
 	);
 };
