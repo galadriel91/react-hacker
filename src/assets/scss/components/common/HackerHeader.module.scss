@@ -7,7 +7,7 @@ body.dark{
 
 header{
     position: sticky; left: 0; top: 0; z-index: 9999;
-    height: 6rem; background: #396EB0;
+    height: 6rem; background: #5684FD;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)) !important;
     .headerWrap{
         display: flex; justify-content: space-between; align-items: center;
@@ -39,11 +39,6 @@ header{
                     }
                     a{
                         display: block;
-                        :global &.active{
-                            &::after{
-                                left: 0; width: 100%;
-                            }
-                        }
                         &:hover span{
                             &::after{
                                 left: 0; width: 100%;
@@ -55,6 +50,11 @@ header{
                             &::after{
                                 content:''; position: absolute; bottom: -3px; left: 50%; width: 0%; height: 1px; background: #fff; transition: all .5s;
                             }
+                        }
+                    }
+                    :global a.active span{
+                        &::after{
+                            left: 0; width: 100%;
                         }
                     }
                 }

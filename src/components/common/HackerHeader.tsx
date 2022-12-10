@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import logo from '../../assets/images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import Style from '../../assets/scss/components/common/HackerHeader.module.scss';
 
@@ -18,6 +19,7 @@ const HackerHeader = () => {
 			<div className={Style.headerWrap}>
 				<h1>
 					<Link to="/news/1">
+						<img src={logo} alt="리액트 로고 이미지" />
 						<span>Hacker News</span>
 					</Link>
 				</h1>
@@ -44,9 +46,13 @@ const HackerHeader = () => {
 								<span>SHOW</span>
 							</NavLink>
 						</li>
+						<li>
+							<button className="xi-moon" />
+						</li>
 					</ul>
 				</nav>
 				{/* :class="{ 'xi-close': isCheck, 'xi-bars': !isCheck }" */}
+				<button className={`${Style.dark} ${'xi-moon'}`} />
 				<button
 					className={`${Style.wholeMenu} ${isCheck ? 'xi-close' : 'xi-bars'}`}
 					onClick={onClickBars}
