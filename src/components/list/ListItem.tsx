@@ -15,27 +15,36 @@ const ListItem = ({ items }: ItemProps) => {
 					<div className={Style.itemWrap}>
 						<span className={Style.indexNumber}>{index + 1}</span>
 						<div className={Style.itemInfo}>
-							{item.domain ? (
-								<p>
-									<a href={item.url} target="_blank" rel="noreferrer">
-										{item.title}
-									</a>
-								</p>
-							) : (
-								<p>
-									<Link to={`/item/${item.id}`}>{item.title}</Link>
-								</p>
-							)}
-							<div>
-								{item.type === 'job' ? <span>by</span> : <span>{item.points} points by</span>}
-								{item.user ? (
-									<Link to={`/user/${item.user}`}>{item.user}</Link>
+							<div className={Style.itemInfoTitleWrap}>
+								{item.domain ? (
+									<p>
+										<a href={item.url} target="_blank" rel="noreferrer">
+											{item.title}
+										</a>
+									</p>
 								) : (
-									<a href={item.url} target="_blank" rel="noreferrer">
-										{item.domain ? item.domain : 'Unknown'}
-									</a>
+									<p>
+										<Link to={`/item/${item.id}`}>{item.title}</Link>
+									</p>
 								)}
-								<span>{item.time_ago}</span>
+							</div>
+							<div className={Style.itemInfoContentWrap}>
+								<div>
+									{item.type === 'job' ? <span>by</span> : <span>{item.points} points by</span>}
+									{item.user ? (
+										<Link to={`/user/${item.user}`}>{item.user}</Link>
+									) : (
+										<a href={item.url} target="_blank" rel="noreferrer">
+											{item.domain ? item.domain : 'Unknown'}
+										</a>
+									)}
+									<span>{item.time_ago}</span>
+								</div>
+								{item.url.includes('item') && item.comments_count ? (
+									<span className={Style.comments}>{item.comments_count} comments</span>
+								) : (
+									''
+								)}
 							</div>
 						</div>
 					</div>
