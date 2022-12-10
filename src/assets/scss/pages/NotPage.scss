@@ -1,0 +1,23 @@
+.container{
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    min-height: calc(100vh - 14rem); color: #000;
+    h1{
+        font-size: 5rem;
+    }
+    p{
+        margin-top: 2.5rem;
+        font-size: 3rem; font-weight: bold;
+    }
+}
+
+@media all and (max-width:900px) {
+    .container{
+        h1{
+            font-size: 3rem; 
+        }
+        p{
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+}

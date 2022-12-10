@@ -8,12 +8,12 @@ const fetchListItem = (pageName: string) => {
 	return instance.get(`${pageName}/1.json`);
 };
 
-// const fetchUserItem = userId => {
-// 	return instance.get(`user/${userId}.json`);
-// };
+const fetchUserItem = (userId: string) => {
+	return instance.get(`user/${userId}.json`);
+};
 
 // const fetchPostItem = itemId => {
 // 	return instance.get(`item/${itemId}.json`);
 // };
 
-export { fetchListItem };
+export { fetchListItem, fetchUserItem };
