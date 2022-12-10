@@ -28,7 +28,7 @@ body.dark{
 
 .userWrap{
     padding-top: 2rem; display: flex; align-items: center;
-    .xi-user-address{
+    :global .xi-user-address{
         font-size: 10rem; color: #777; margin-left: -1rem;
     }
     .userInfo{
@@ -57,7 +57,7 @@ body.dark{
 
 @media all and (max-width:1220px) {
     .userWrap{
-        .xi-user-address{
+        :global .xi-user-address{
             margin-left: 1.5rem;
         }
         .userInfo{

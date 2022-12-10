@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import UserItem from '../components/user/UserItem';
 import { useParams } from 'react-router-dom';
 import { FETCH_USER } from '../store/features/sync';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
@@ -14,7 +15,11 @@ const UserPage = () => {
 		document.title = `${params.id} | Hacker News`;
 	}, [params.id]);
 
-	return <div className={Style.userContainer}>User</div>;
+	return (
+		<div className={Style.userContainer}>
+			<UserItem item={user} />
+		</div>
+	);
 };
 
 export default UserPage;

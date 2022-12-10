@@ -10,14 +10,16 @@ const App = () => {
 	return (
 		<div>
 			<HackerHeader />
-			<Routes>
-				<Route path="/" element={<Navigate replace to="/news" />} />
-				<Route path="/news" element={<ListPage />} />
-				<Route path="/ask" element={<ListPage />} />
-				<Route path="/jobs" element={<ListPage />} />
-				<Route path="/show" element={<ListPage />} />
-				<Route path="/user/:id" element={<UserPage />} />
-			</Routes>
+			<div className="pageWrap">
+				<Routes>
+					<Route path="/" element={<Navigate replace to="/news" />} />
+					<Route path="/news" element={<ListPage />} />
+					<Route path="/ask" element={<ListPage />} />
+					<Route path="/jobs" element={<ListPage />} />
+					<Route path="/show" element={<ListPage />} />
+					<Route path="/user/:id" element={<UserPage />} />
+				</Routes>
+			</div>
 			<HackerFooter />
 		</div>
 	);
