@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
 import ListItem from '../components/list/ListItem';
+import ListPagination from '../components/list/ListPagination';
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { FETCH_LIST } from '../store/features/sync';
@@ -30,6 +31,7 @@ const ListPage = () => {
 	return (
 		<div>
 			<ListItem items={lists} />
+			<ListPagination />
 		</div>
 	);
 };
