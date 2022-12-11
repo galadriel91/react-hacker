@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Style from '../../assets/scss/components/post/PostComments.module.scss';
 import { PostsItem } from '../../store/features/types';
+import CommentsItem from './CommentsItem';
 
 type ItemProps = {
 	item: PostsItem;
 };
 
 const PostComments = ({ item }: ItemProps) => {
+	const [first, setFirst] = useState(true);
 	return (
 		<div className={Style.commentWrap}>
-			<div>
+			<div className={Style.mainComments}>
 				<h2>Comments</h2>
 				<span>({item.comments_count})</span>
 			</div>
+			<ul>
+				<CommentsItem isFirst={first} items={item} />
+			</ul>
 		</div>
 	);
 };
