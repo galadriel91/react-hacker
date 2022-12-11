@@ -6,6 +6,7 @@ import ListPage from './pages/ListPage';
 import UserPage from './pages/UserPage';
 import PostPage from './pages/PostPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
+import HackerLoading from './components/common/HackerLoading';
 
 const App = () => {
 	return (
@@ -23,6 +24,7 @@ const App = () => {
 				</Routes>
 			</div>
 			<HackerFooter />
+			<HackerLoading />
 		</div>
 	);
 };
