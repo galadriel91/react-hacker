@@ -13,7 +13,7 @@ const CommentsItem = ({ isFirst, items }: ItemProps) => {
 		<li className={Style.innerContainer}>
 			<div className={Style.innerInfo}>
 				<div className={Style.userInfo}>
-					{!isFirst ? <span className="xi-subdirectory-arrow arrow" /> : ''}
+					{!isFirst ? <span className={`xi-subdirectory-arrow ${Style.arrow}`} /> : ''}
 					<p className="xi-profile" />
 					<div>
 						<Link to={`/user/${items.user}`}>{items.user}</Link>
@@ -21,6 +21,13 @@ const CommentsItem = ({ isFirst, items }: ItemProps) => {
 					</div>
 				</div>
 				<p className={Style.content} dangerouslySetInnerHTML={{ __html: items.content }} />
+			</div>
+			<div>
+				<ul className={Style.innerComment}>
+					{items.comments.map(v => (
+						<CommentsItem key={v.id} isFirst={false} items={v} />
+					))}
+				</ul>
 			</div>
 		</li>
 	);
