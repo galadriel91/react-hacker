@@ -14,11 +14,11 @@ const App = () => {
 			<HackerHeader />
 			<div className="pageWrap">
 				<Routes>
-					<Route path="/" element={<Navigate replace to="/news" />} />
-					<Route path="/news" element={<ListPage />} />
-					<Route path="/ask" element={<ListPage />} />
-					<Route path="/jobs" element={<ListPage />} />
-					<Route path="/show" element={<ListPage />} />
+					<Route path="/" element={<Navigate replace to="/news/1" state="News" />} />
+					<Route path="/news/:id" element={<ListPage />} />
+					<Route path="/ask/:id" element={<ListPage />} />
+					<Route path="/jobs/:id" element={<ListPage />} />
+					<Route path="/show/:id" element={<ListPage />} />
 					<Route path="/user/:id" element={<UserPage />} />
 					<Route path="/post/:id" element={<PostPage />} />
 				</Routes>

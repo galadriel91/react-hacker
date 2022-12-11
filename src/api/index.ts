@@ -4,8 +4,8 @@ const instance = axios.create({
 	baseURL: 'https://api.hnpwa.com/v0',
 });
 
-const fetchListItem = (pageName: string) => {
-	return instance.get(`${pageName}/1.json`);
+const fetchListItem = (pageInfo: string) => {
+	return instance.get(`${pageInfo}.json`);
 };
 
 const fetchUserItem = (userId: string) => {

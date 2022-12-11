@@ -11,16 +11,16 @@ const ListPage = () => {
 	const location = useLocation();
 
 	const getTitleName = useCallback(() => {
-		if (location.pathname === '/news') {
+		if (location.state === 'News') {
 			return 'News';
-		} else if (location.pathname === '/ask') {
+		} else if (location.state === 'Ask') {
 			return 'Ask';
-		} else if (location.pathname === '/jobs') {
+		} else if (location.state === 'Jobs') {
 			return 'Jobs';
-		} else if (location.pathname === '/show') {
+		} else if (location.state === 'Show') {
 			return 'Show';
 		}
-	}, [location.pathname]);
+	}, [location.state]);
 
 	useEffect(() => {
 		dispatch(FETCH_LIST(location.pathname));
@@ -31,7 +31,7 @@ const ListPage = () => {
 	return (
 		<div>
 			<ListItem items={lists} />
-			<ListPagination />
+			{location.state === 'Jobs' ? null : <ListPagination />}
 		</div>
 	);
 };

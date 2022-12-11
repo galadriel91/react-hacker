@@ -8,16 +8,16 @@ const ListPagination = () => {
 	const location = useLocation();
 
 	const pageLength = useCallback(() => {
-		if (location.pathname === '/news') {
+		if (location.state === 'News') {
 			return Array(10).fill('');
-		} else if (location.pathname === '/ask') {
+		} else if (location.state === 'Ask') {
 			return Array(2).fill('');
-		} else if (location.pathname === '/jobs') {
-			return Array(1).fill('');
+		} else if (location.state === 'Show') {
+			return Array(2).fill('');
 		} else {
-			return Array(2).fill('');
+			return Array(1).fill('');
 		}
-	}, [location.pathname]);
+	}, [location.state]);
 
 	return (
 		<div className={Style.listContainer}>
