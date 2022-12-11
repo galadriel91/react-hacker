@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import UserItem from '../components/user/UserItem';
 import PostContents from '../components/post/PostContents';
+import PostComments from '../components/post/PostComments';
 import Style from '../assets/scss/pages/PostPage.module.scss';
 
 const PostPage = () => {
@@ -20,6 +21,7 @@ const PostPage = () => {
 		<div className={Style.itemContainer}>
 			<UserItem item={post} />
 			<PostContents item={post} />
+			{post.comments_count ? <PostComments item={post} /> : ''}
 		</div>
 	);
 };
