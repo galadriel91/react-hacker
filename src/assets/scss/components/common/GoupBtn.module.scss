@@ -1,5 +1,5 @@
-body.dark{
-    div{
+body:global(.dark){
+    .upBtn{
         background: #323232; color: #AFAFAF;
         &:hover{
             background: #000; color: #fff;
@@ -7,7 +7,7 @@ body.dark{
     }
 }
 
-div{
+.upBtn{
     width: 100%; height: 3rem; background: #fff; border: 1px solid #999; border-top: none;
     font-size: 1.8rem; color: #000; font-weight: bold; text-align: center; line-height: 3rem;
     cursor: pointer; transition: all .5s; display: none; box-sizing: border-box;
@@ -23,13 +23,13 @@ div{
 }
 
 @media all and (max-width:900px) {
-  div{
+    .upBtn{
       font-size: 1.6rem;
   }
 }
 
 @media all and (max-width:500px) {
-    div{
+    .upBtn{
         height: 2.5rem; font-size: 1.4rem; line-height: 2.5rem;
     }
   }
