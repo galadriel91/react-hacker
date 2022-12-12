@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import Style from '../../assets/scss/components/list/ListPagi.module.scss';
 import { useParams, useLocation } from 'react-router-dom';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ListPagination = () => {
 	const params = useParams();

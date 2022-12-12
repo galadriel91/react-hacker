@@ -1,7 +1,9 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import Style from '../../assets/scss/components/common/GoupBtn.module.scss';
+import { useLocation } from 'react-router-dom';
 
 const HackerUpbtn = () => {
+	const location = useLocation();
 	const [windowTop, setWindowTop] = useState(0);
 
 	const onClickUp = useCallback(() => {
@@ -22,13 +24,15 @@ const HackerUpbtn = () => {
 
 	useEffect(() => {
 		window.addEventListener('scroll', onScroll);
+		return () => {
+			window.removeEventListener('scroll', onScroll);
+		};
 	}, []);
 
 	return (
 		<div
 			className={`${Style.upBtn} ${SCROLL() ? Style.on : ''} xi-angle-up-thin`}
 			onClick={onClickUp}
-			// :class="{ on: SCROLL, show: CHECKPAGE }"
 		/>
 	);
 };
