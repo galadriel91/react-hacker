@@ -13,7 +13,7 @@ const UserItem = ({ item }: ItemProps) => {
 
 	return (
 		<div>
-			<div className={Style.userWrap}>
+			<div className={`${Style.userWrap}`}>
 				<p className="xi-user-address" />
 				{isUserItems(item) ? (
 					<div className={Style.userInfo}>

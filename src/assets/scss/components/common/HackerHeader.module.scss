@@ -1,5 +1,5 @@
 // 다크 모드
-:global body.dark{
+body:global(.dark){
     header{
         background: #000;
     }

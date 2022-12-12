@@ -7,7 +7,7 @@ const HackerLoading = () => {
 	return (
 		<div>
 			{loading ? (
-				<div className={Style.loadingContainer}>
+				<div className={`${Style.loadingContainer}`}>
 					<div className={Style['lds-facebook']}>
 						<div />
 						<div />

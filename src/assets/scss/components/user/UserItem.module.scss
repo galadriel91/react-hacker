@@ -1,6 +1,6 @@
-body.dark{
+body:global(.dark){
     .userWrap{
-        .xi-user-address{
+        :global .xi-user-address{
             color: #fff;
         }
         .userInfo{
