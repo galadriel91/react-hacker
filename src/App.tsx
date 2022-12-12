@@ -7,6 +7,7 @@ import UserPage from './pages/UserPage';
 import PostPage from './pages/PostPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import HackerLoading from './components/common/HackerLoading';
+import HackerButtons from './components/common/HackerButtons';
 
 const App = () => {
 	return (
@@ -23,6 +24,7 @@ const App = () => {
 					<Route path="/post/:id" element={<PostPage />} />
 				</Routes>
 			</div>
+			<HackerButtons />
 			<HackerFooter />
 			<HackerLoading />
 		</div>
