@@ -10,7 +10,11 @@ export const itemSlice = createSlice({
 		user: {} as UserItems,
 		posts: {} as PostsItem,
 	},
-	reducers: {},
+	reducers: {
+		OFF_LOADING: state => {
+			state.isLoading = false;
+		},
+	},
 	extraReducers: builder => {
 		builder.addCase(FETCH_LIST.pending, (state, action) => {
 			state.isLoading = true;
@@ -36,4 +40,5 @@ export const itemSlice = createSlice({
 	},
 });
 
+export const { OFF_LOADING } = itemSlice.actions;
 export default itemSlice.reducer;

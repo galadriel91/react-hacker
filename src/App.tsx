@@ -1,5 +1,5 @@
 import React from 'react';
-import 'assets/scss/index.scss';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import HackerHeader from 'components/common/HackerHeader';
 import HackerFooter from 'components/common/HackerFooter';
 import HackerLoading from 'components/common/HackerLoading';
@@ -7,7 +7,8 @@ import HackerButtons from 'components/common/HackerButtons';
 import ListPage from 'pages/ListPage';
 import UserPage from 'pages/UserPage';
 import PostPage from 'pages/PostPage';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import NotPage from 'pages/NotPage';
+import 'assets/scss/index.scss';
 
 const App = () => {
 	return (
@@ -22,6 +23,7 @@ const App = () => {
 					<Route path="/show/:id" element={<ListPage />} />
 					<Route path="/user/:id" element={<UserPage />} />
 					<Route path="/post/:id" element={<PostPage />} />
+					<Route path="*" element={<NotPage />} />
 				</Routes>
 			</div>
 			<HackerFooter />
