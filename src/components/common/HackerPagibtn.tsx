@@ -33,7 +33,7 @@ const HackerPagibtn = () => {
 		[id],
 	);
 
-	return (
+	return pageLength() === '1' ? null : (
 		<div className={Style.remoteWrap}>
 			<div className={Style.remoteIndex}>
 				<button

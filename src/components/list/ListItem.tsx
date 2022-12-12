@@ -30,7 +30,9 @@ const ListItem = ({ items }: ItemProps) => {
 									</p>
 								) : (
 									<p>
-										<Link to={`/post/${item.id}`}>{item.title}</Link>
+										<Link to={`/post/${item.id}`} state="post">
+											{item.title}
+										</Link>
 									</p>
 								)}
 							</div>

@@ -19,7 +19,7 @@ const ListPagination = () => {
 		}
 	}, [location.state]);
 
-	return (
+	return pageLength().length === 1 ? null : (
 		<div className={Style.listContainer}>
 			<ul>
 				{pageLength().map((v, index) => (

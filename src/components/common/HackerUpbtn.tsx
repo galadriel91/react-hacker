@@ -22,6 +22,14 @@ const HackerUpbtn = () => {
 		setWindowTop(window.scrollY);
 	}, [windowTop]);
 
+	const isShow = useCallback(() => {
+		if (location.state === 'jobs' || location.state === 'post') {
+			return true;
+		} else {
+			return false;
+		}
+	}, [location.state]);
+
 	useEffect(() => {
 		window.addEventListener('scroll', onScroll);
 		return () => {
@@ -31,7 +39,9 @@ const HackerUpbtn = () => {
 
 	return (
 		<div
-			className={`${Style.upBtn} ${SCROLL() ? Style.on : ''} xi-angle-up-thin`}
+			className={`${Style.upBtn} ${SCROLL() ? Style.on : ''} ${
+				isShow() ? Style.show : ''
+			} xi-angle-up-thin`}
 			onClick={onClickUp}
 		/>
 	);
