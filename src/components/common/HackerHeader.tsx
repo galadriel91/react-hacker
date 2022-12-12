@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
-import { Link, NavLink } from 'react-router-dom';
 import Style from '../../assets/scss/components/common/HackerHeader.module.scss';
 
 const HackerHeader = () => {
+	const location = useLocation();
 	const [isCheck, setIsCheck] = useState(false);
 	const [dark, setDark] = useState(false);
 	const isInit = useRef(0);
@@ -47,24 +48,24 @@ const HackerHeader = () => {
 				<nav className={isCheck ? Style.open : ''}>
 					<ul>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/news/1" state="news">
+							<Link to="/news/1" state="news" className={location.state === 'news' ? 'active' : ''}>
 								<span>NEWS</span>
-							</NavLink>
+							</Link>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/ask/1" state="ask">
+							<Link to="/ask/1" state="ask" className={location.state === 'ask' ? 'active' : ''}>
 								<span>ASK</span>
-							</NavLink>
+							</Link>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/jobs/1" state="jobs">
+							<Link to="/jobs/1" state="jobs" className={location.state === 'jobs' ? 'active' : ''}>
 								<span>JOBS</span>
-							</NavLink>
+							</Link>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/show/1" state="show">
+							<Link to="/show/1" state="show" className={location.state === 'show' ? 'active' : ''}>
 								<span>SHOW</span>
-							</NavLink>
+							</Link>
 						</li>
 						<li>
 							<button className="xi-moon" onClick={onClickDark} />

@@ -7,10 +7,9 @@ import HackerButtons from './components/common/HackerButtons';
 import ListPage from './pages/ListPage';
 import UserPage from './pages/UserPage';
 import PostPage from './pages/PostPage';
-import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {
-	const location = useLocation();
 	return (
 		<div>
 			<HackerHeader />
