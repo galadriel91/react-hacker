@@ -1,18 +1,20 @@
-import axios from 'axios';
+import axios, { type AxiosResponse } from 'axios';
+
+import { UserItems, PostsItem, ListItems } from 'store/features/types';
 
 const instance = axios.create({
-	baseURL: 'https://api.hnpwa.com/v0',
+	baseURL: process.env.REACT_APP_API,
 });
 
-const fetchListItem = (pageInfo: string) => {
+const fetchListItem = (pageInfo: string): Promise<AxiosResponse<ListItems[]>> => {
 	return instance.get(`${pageInfo}.json`);
 };
 
-const fetchUserItem = (userId: string) => {
+const fetchUserItem = (userId: string): Promise<AxiosResponse<UserItems>> => {
 	return instance.get(`user/${userId}.json`);
 };
 
-const fetchPostItem = (itemId: string) => {
+const fetchPostItem = (itemId: string): Promise<AxiosResponse<PostsItem>> => {
 	return instance.get(`item/${itemId}.json`);
 };
 
