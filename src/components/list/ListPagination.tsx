@@ -8,11 +8,11 @@ const ListPagination = () => {
 	const location = useLocation();
 
 	const pageLength = useCallback(() => {
-		if (location.state === 'News') {
+		if (location.state === 'news') {
 			return Array(10).fill('');
-		} else if (location.state === 'Ask') {
+		} else if (location.state === 'ask') {
 			return Array(2).fill('');
-		} else if (location.state === 'Show') {
+		} else if (location.state === 'show') {
 			return Array(2).fill('');
 		} else {
 			return Array(1).fill('');
@@ -24,7 +24,13 @@ const ListPagination = () => {
 			<ul>
 				{pageLength().map((v, index) => (
 					<li key={index}>
-						<Link to="/news">{index + 1}</Link>
+						<Link
+							to={`/${location.state}/${index + 1}`}
+							state={location.state}
+							className={Number(params.id) === index + 1 ? Style.active : ''}
+						>
+							{index + 1}
+						</Link>
 					</li>
 				))}
 			</ul>

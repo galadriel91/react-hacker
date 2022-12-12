@@ -11,13 +11,13 @@ const ListPage = () => {
 	const location = useLocation();
 
 	const getTitleName = useCallback(() => {
-		if (location.state === 'News') {
+		if (location.state === 'news') {
 			return 'News';
-		} else if (location.state === 'Ask') {
+		} else if (location.state === 'ask') {
 			return 'Ask';
-		} else if (location.state === 'Jobs') {
+		} else if (location.state === 'jobs') {
 			return 'Jobs';
-		} else if (location.state === 'Show') {
+		} else if (location.state === 'show') {
 			return 'Show';
 		}
 	}, [location.state]);

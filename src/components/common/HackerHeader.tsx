@@ -39,7 +39,7 @@ const HackerHeader = () => {
 		<header>
 			<div className={Style.headerWrap}>
 				<h1>
-					<Link to="/news/1" state="News">
+					<Link to="/news/1" state="news">
 						<img src={logo} alt="리액트 로고 이미지" />
 						<span>Hacker News</span>
 					</Link>
@@ -47,22 +47,22 @@ const HackerHeader = () => {
 				<nav className={isCheck ? Style.open : ''}>
 					<ul>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/news/1" state="News">
+							<NavLink to="/news/1" state="news">
 								<span>NEWS</span>
 							</NavLink>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/ask/1" state="Ask">
+							<NavLink to="/ask/1" state="ask">
 								<span>ASK</span>
 							</NavLink>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/jobs/1" state="Jobs">
+							<NavLink to="/jobs/1" state="jobs">
 								<span>JOBS</span>
 							</NavLink>
 						</li>
 						<li onClick={onClickOffBar}>
-							<NavLink to="/show/1" state="Show">
+							<NavLink to="/show/1" state="show">
 								<span>SHOW</span>
 							</NavLink>
 						</li>

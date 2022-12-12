@@ -5,6 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const commonSlice = createSlice({
 	name: 'common',
 	initialState: {
+		currentPage: 1,
 		// isLoading: true,
 		// lists: [] as ListItems[],
 		// user: {} as UserItems,

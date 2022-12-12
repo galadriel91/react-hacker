@@ -1,4 +1,4 @@
-body.dark{
+body:global(.dark){
     .listContainer{
         background: #323232;
         ul{
@@ -23,7 +23,7 @@ body.dark{
                 display: block; line-height: 5rem; margin: 0 1rem;
                 font-size: 1.6rem; font-weight: bold; color: #000; cursor: pointer;
                 &.active{
-                    color: #00A19D;
+                    color: #5684FD;
                 }
             }
         }

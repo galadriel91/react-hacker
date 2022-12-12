@@ -14,7 +14,7 @@ const App = () => {
 			<HackerHeader />
 			<div className="pageWrap">
 				<Routes>
-					<Route path="/" element={<Navigate replace to="/news/1" state="News" />} />
+					<Route path="/" element={<Navigate replace to="/news/1" state="news" />} />
 					<Route path="/news/:id" element={<ListPage />} />
 					<Route path="/ask/:id" element={<ListPage />} />
 					<Route path="/jobs/:id" element={<ListPage />} />
