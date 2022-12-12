@@ -68,11 +68,11 @@ const HackerHeader = () => {
 							</Link>
 						</li>
 						<li>
-							<button className="xi-moon" onClick={onClickDark} />
+							<button className={`${dark ? 'xi-sun' : 'xi-moon'}`} onClick={onClickDark} />
 						</li>
 					</ul>
 				</nav>
-				<button className={`${Style.dark} ${'xi-moon'}`} />
+				<button className={`${Style.dark} ${dark ? 'xi-sun' : 'xi-moon'}`} />
 				<button
 					className={`${Style.wholeMenu} ${isCheck ? 'xi-close' : 'xi-bars'}`}
 					onClick={onClickBars}
