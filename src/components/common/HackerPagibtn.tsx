@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Style from '../../assets/scss/components/common/PagiBtn.module.scss';
 import { useLocation, useMatch, useNavigate } from 'react-router-dom';
+import Style from 'assets/scss/components/common/PagiBtn.module.scss';
 
 const HackerPagibtn = () => {
 	const location = useLocation();

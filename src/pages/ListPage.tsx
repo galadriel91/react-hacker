@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect } from 'react';
-import ListItem from '../components/list/ListItem';
-import ListPagination from '../components/list/ListPagination';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { useLocation } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { FETCH_LIST } from '../store/features/sync';
+import { FETCH_LIST } from 'store/features/sync';
+import ListPagination from 'components/list/ListPagination';
+import ListItem from 'components/list/ListItem';
 
 const ListPage = () => {
 	const dispatch = useAppDispatch();

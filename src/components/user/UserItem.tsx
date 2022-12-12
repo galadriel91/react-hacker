@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { UserItems, PostsItem } from '../../store/features/types';
-import Style from '../../assets/scss/components/user/UserItem.module.scss';
+import { UserItems, PostsItem } from 'store/features/types';
+import Style from 'assets/scss/components/user/UserItem.module.scss';
 
 type ItemProps = {
 	item: UserItems | PostsItem;

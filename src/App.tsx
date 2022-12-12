@@ -1,12 +1,12 @@
 import React from 'react';
-import './assets/scss/index.scss';
-import HackerHeader from './components/common/HackerHeader';
-import HackerFooter from './components/common/HackerFooter';
-import HackerLoading from './components/common/HackerLoading';
-import HackerButtons from './components/common/HackerButtons';
-import ListPage from './pages/ListPage';
-import UserPage from './pages/UserPage';
-import PostPage from './pages/PostPage';
+import 'assets/scss/index.scss';
+import HackerHeader from 'components/common/HackerHeader';
+import HackerFooter from 'components/common/HackerFooter';
+import HackerLoading from 'components/common/HackerLoading';
+import HackerButtons from 'components/common/HackerButtons';
+import ListPage from 'pages/ListPage';
+import UserPage from 'pages/UserPage';
+import PostPage from 'pages/PostPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {

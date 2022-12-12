@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
-import Style from '../../assets/scss/components/common/HackerHeader.module.scss';
+import logo from 'assets/images/logo.png';
+import Style from 'assets/scss/components/common/HackerHeader.module.scss';
 
 const HackerHeader = () => {
 	const location = useLocation();

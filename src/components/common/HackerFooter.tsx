@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/scss/components/common/HackerFooter.scss';
+import 'assets/scss/components/common/HackerFooter.scss';
 
 const HackerFooter = () => {
 	const getCurrentYear = () => {

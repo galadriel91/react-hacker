@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import Style from '../../assets/scss/components/list/ListPagi.module.scss';
 import { useParams, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Style from 'assets/scss/components/list/ListPagi.module.scss';
 
 const ListPagination = () => {
 	const params = useParams();

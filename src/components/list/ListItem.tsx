@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ListItems } from '../../store/features/types';
-import Style from '../../assets/scss/components/list/ListItem.module.scss';
+import { ListItems } from 'store/features/types';
+import Style from 'assets/scss/components/list/ListItem.module.scss';
 
 type ItemProps = {
 	items: ListItems[];
