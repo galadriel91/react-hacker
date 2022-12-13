@@ -26,7 +26,6 @@ const UserPage = () => {
 
 	useEffect(() => {
 		handldeFetch();
-		// dispatch(FETCH_USER(params.id as string));
 		document.title = `${params.id} | Hacker News`;
 	}, [params.id]);
 
