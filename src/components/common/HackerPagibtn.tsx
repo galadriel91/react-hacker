@@ -5,20 +5,33 @@ import Style from 'assets/scss/components/common/PagiBtn.module.scss';
 const HackerPagibtn = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const id = useMatch(`/${location.state}/:id`);
+
+	const getTitleName = useCallback(() => {
+		if (location.pathname.includes('news')) {
+			return 'news';
+		} else if (location.pathname.includes('ask')) {
+			return 'ask';
+		} else if (location.pathname.includes('jobs')) {
+			return 'jobs';
+		} else if (location.pathname.includes('show')) {
+			return 'show';
+		}
+	}, [location.state]);
+
+	const id = useMatch(`/${getTitleName()}/:id`);
 	const [currentId, setCurrentId] = useState(id?.params.id);
 
 	const pageLength = useCallback(() => {
-		if (location.state === 'news') {
+		if (location.pathname.includes('news')) {
 			return '10';
-		} else if (location.state === 'ask') {
+		} else if (location.pathname.includes('ask')) {
 			return '2';
-		} else if (location.state === 'show') {
+		} else if (location.pathname.includes('show')) {
 			return '2';
 		} else {
 			return '1';
 		}
-	}, [location.state]);
+	}, [location.pathname]);
 
 	useEffect(() => {
 		setCurrentId(id?.params.id);
@@ -26,8 +39,8 @@ const HackerPagibtn = () => {
 
 	const onClickMovePage = useCallback(
 		(page: number) => {
-			navigate(`/${location.state}/${page}`, {
-				state: location.state,
+			navigate(`/${getTitleName()}/${page}`, {
+				state: getTitleName(),
 			});
 		},
 		[id],

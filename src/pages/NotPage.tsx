@@ -7,6 +7,7 @@ const NotPage = () => {
 	const dispatch = useAppDispatch();
 	useEffect(() => {
 		dispatch(OFF_LOADING());
+		document.title = `Error | Hacker News `;
 	}, []);
 
 	return (
