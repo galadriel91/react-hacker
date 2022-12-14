@@ -56,7 +56,7 @@ const HackerPagibtn = () => {
 				/>
 				<span>{currentId}</span>
 				<button
-					className={`${currentId === pageLength()} xi-angle-right`}
+					className={`${currentId === pageLength() ? Style.disable : ''} xi-angle-right`}
 					disabled={currentId === pageLength()}
 					onClick={() => onClickMovePage(Number(currentId) + 1)}
 				/>
