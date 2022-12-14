@@ -16,7 +16,7 @@ const HackerFooter = () => {
 					className="xi-github"
 					rel="noreferrer"
 				>
-					&nbsp;
+					<div>빈값</div>
 				</a>
 			</div>
 		</footer>

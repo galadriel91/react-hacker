@@ -25,6 +25,9 @@ footer{
         a{
             margin-top: 1rem; display: inline-block;
             font-size: 2.5rem; color: #000;
+            div{
+                display: none;
+            }
         }
     }
 }
