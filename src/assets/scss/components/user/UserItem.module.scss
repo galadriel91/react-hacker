@@ -6,6 +6,12 @@ body:global(.dark){
         .userInfo{
             h4{
                 color: #fff;
+                a{
+                    color: #afafaf; transition: all .5s;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
             }
             p{
                 color: #afafaf;
