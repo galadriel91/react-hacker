@@ -34,7 +34,9 @@ const ListPage = () => {
 			} else {
 				navigate('/404');
 			}
-		} catch (err) {}
+		} catch (err) {
+			navigate('/404');
+		}
 	};
 
 	useEffect(() => {
