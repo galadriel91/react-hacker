@@ -1,28 +1,43 @@
-body:global(.dark){
-    .commentWrap{
-        div{
-            color: #fff;
-        }
-    }
-}
-
-
 .commentWrap{
-    margin: 5rem 0;
+    margin: 3rem 0 5rem;
     .mainComments{
-        display: flex; color: #000; align-items: center;
+        display: flex; color: #34495E;align-items: center;
         h2{
-            font-size: 2rem; margin-right: .5rem;
+            font-size: 2.3rem; margin-right: .5rem; font-weight: normal;
         }
         span{
-            font-size: 1.8rem; font-weight: bold;
+            position: relative; top: .1rem;
+            font-size: 1.8rem; 
         }
     }
     
 }
 
-@media all and (max-width:1220px) {
+@media all and (max-width:1260px) {
     .commentWrap{
-        padding: 0 2.5rem;
+        padding: 0 3rem;
+        div{
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width:500px) {
+    .commentWrap{
+        margin: 2rem 0 5rem;
+        padding: 0 2rem;
+        div{
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width:340px) {
+    .commentWrap{
+        padding: 0 1rem;
     }
 }

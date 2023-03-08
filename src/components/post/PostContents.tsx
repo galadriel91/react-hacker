@@ -9,6 +9,7 @@ type ItemProps = {
 const PostContents = ({ item }: ItemProps) => {
 	return (
 		<div className={Style.itemWrap}>
+			<span>&nbsp;</span>
 			<h1>{item.title}</h1>
 			<div>
 				<p dangerouslySetInnerHTML={{ __html: item.content }} />

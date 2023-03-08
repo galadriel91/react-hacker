@@ -31,11 +31,15 @@ const UserItem = ({ item }: ItemProps) => {
 					</div>
 				)}
 			</div>
-			{isUserItems(item) && item.about ? (
+			{isUserItems(item) ? (
 				<div className={Style.userDesc}>
 					<span>&nbsp;</span>
 					<h3>About</h3>
-					<div dangerouslySetInnerHTML={{ __html: item.about }} />
+					{item.about ? (
+						<div className={Style.aboutWrap} dangerouslySetInnerHTML={{ __html: item.about }} />
+					) : (
+						<div className={Style.aboutWrap}>This user has not yet written anything about</div>
+					)}
 				</div>
 			) : (
 				''
