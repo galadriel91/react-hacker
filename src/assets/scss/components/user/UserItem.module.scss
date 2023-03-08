@@ -1,59 +1,32 @@
-body:global(.dark){
-    .userWrap{
-        :global .xi-user-address{
-            color: #fff;
-        }
-        .userInfo{
-            h4{
-                color: #fff;
-                a{
-                    color: #afafaf; transition: all .5s;
-                    &:hover{
-                        color: #fff;
-                    }
-                }
-            }
-            p{
-                color: #afafaf;
-            }
-            span{
-                color: #afafaf;
-            }
-        }
-    }
-    .userDesc{
-        h3{
-            color: #fff;
-        }
-        div{
-            color: #afafaf;
-        }
-    }
-}
-
-
 .userWrap{
+    margin-left: -.1rem;
     padding-top: 2rem; display: flex; align-items: center;
     :global .xi-user-address{
-        font-size: 10rem; color: #777; margin-left: -1rem;
+        font-size: 10rem; color: #34495E;; margin-left: -1rem;
     }
     .userInfo{
         h4{
-            font-size: 1.8rem; color: #000;
+            font-size: 1.8rem; color: #34495E; font-weight: normal;
         }
         p{
-            font-size: 1.6rem; color: #666; font-weight: bold;
+            font-size: 1.6rem; color: #666;
         }
         span{
             display: inline-block; margin: .5rem 0;
-            font-size: 1.6rem; color: #444; font-weight: bold;
+            font-size: 1.6rem; color: #444;
         }
     }
 }
 .userDesc{
-    margin:1rem 0 0 .5rem; font-weight: bold;
+    margin:1rem 0 0 .2rem;
+    span{
+        margin-top: 1.5rem; display: block; margin-left: 0.1rem;
+        height: .5rem; width: 7rem; 
+        background: #00A19D;
+    }
     h3{
-        font-size: 1.8rem ; color: #000;
+        margin-top: 2rem;
+        font-size: 1.8rem ; color: #000; font-weight: normal;
     }
     div{
         margin-top: 1rem;

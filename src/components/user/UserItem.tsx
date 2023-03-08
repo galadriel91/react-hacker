@@ -33,6 +33,7 @@ const UserItem = ({ item }: ItemProps) => {
 			</div>
 			{isUserItems(item) && item.about ? (
 				<div className={Style.userDesc}>
+					<span>&nbsp;</span>
 					<h3>About</h3>
 					<div dangerouslySetInnerHTML={{ __html: item.about }} />
 				</div>
