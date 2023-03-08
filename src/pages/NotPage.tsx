@@ -12,8 +12,8 @@ const NotPage = () => {
 
 	return (
 		<div className={Style.container}>
-			<h1>404 Not Found</h1>
-			<p>페이지를 찾을수 없습니다.</p>
+			<h1>404</h1>
+			<p>Not Found</p>
 		</div>
 	);
 };

@@ -1,31 +1,19 @@
-body:global(.dark){
-    .container{
-        h1{
-            color: #fff;
-        }
-        p{
-            color: #afafaf;
-        }
-    }
-}
-
-
 .container{
     display: flex; justify-content: center; align-items: center; flex-direction: column;
-    min-height: calc(100vh - 14rem); color: #000;
+    min-height: 60vh;
     h1{
-        font-size: 5rem;
+        font-size: 20rem; font-weight: 400; color: #34495e;
     }
     p{
-        margin-top: 2.5rem;
-        font-size: 3rem; font-weight: bold;
+        margin-top: -2.5rem;
+        font-size: 7rem; font-weight: 400; color: #00A19D;
     }
 }
 
 @media all and (max-width:900px) {
     .container{
         h1{
-            font-size: 3rem; 
+            font-size: 3rem;
         }
         p{
             margin-top: 2rem;
