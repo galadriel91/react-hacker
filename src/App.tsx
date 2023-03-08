@@ -2,12 +2,13 @@ import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import HackerHeader from 'components/common/HackerHeader';
 import HackerFooter from 'components/common/HackerFooter';
-import HackerLoading from 'components/common/HackerLoading';
+// import HackerLoading from 'components/common/HackerLoading';
 import HackerButtons from 'components/common/HackerButtons';
 import ListPage from 'pages/ListPage';
 import UserPage from 'pages/UserPage';
 import PostPage from 'pages/PostPage';
 import NotPage from 'pages/NotPage';
+import MainPage from 'pages/MainPage';
 import 'assets/scss/index.scss';
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
 			<HackerHeader />
 			<div className="pageWrap">
 				<Routes>
-					<Route path="/" element={<Navigate replace to="/news/1" state="news" />} />
+					<Route path="/" element={<MainPage />} />
 					<Route path="/news/:id" element={<ListPage />} />
 					<Route path="/ask/:id" element={<ListPage />} />
 					<Route path="/jobs/:id" element={<ListPage />} />
@@ -27,7 +28,7 @@ const App = () => {
 				</Routes>
 			</div>
 			<HackerFooter />
-			<HackerLoading />
+			{/* <HackerLoading /> */}
 			<HackerButtons />
 		</div>
 	);

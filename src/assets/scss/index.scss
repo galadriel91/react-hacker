@@ -1,4 +1,5 @@
 @import './common/reset';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 @font-face {
     font-family: 'ChosunSg';
@@ -12,7 +13,7 @@ html{
 
 body{
     overflow-x: hidden; box-sizing: border-box;
-    font-family: 'ChosunSg'; font-size: 1rem;
+    font-family: 'Cabin'; font-weight: 400; font-size: 1rem;
     &::-webkit-scrollbar {
         background-color: transparent;
         width: 10px;

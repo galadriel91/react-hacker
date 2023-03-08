@@ -1,0 +1,119 @@
+.heroContainer{
+    position: relative;
+    height: 100vh;
+    background:url('../../../images/mainBg.jpg')no-repeat;
+    background-size: cover;
+    background-position:  center;
+    &Wrap{
+        max-width: 120rem; margin: 0 auto;
+        &Text{
+            position: absolute; top: 45%; transform: translateY(-50%);
+            .responsive{
+                display: none;
+            }
+            h2{
+                font-weight: 700; font-size: 4.8rem; line-height: 5.8rem;
+                color: #FFFFFF; 
+            }
+            p{
+                margin-top: 3rem; margin-bottom: 4rem;
+                font-style: normal; font-weight: 600; font-size: 1.8rem;
+                line-height: 163.15%; color: rgba(255, 255, 255, 0.8);
+            }
+            a{
+                display: flex; align-items: center; justify-content: center;
+                width: 15rem; height: 5rem; background: #00A19D;
+                font-weight: 400; font-size: 1.6rem; line-height: 2.4rem;
+                cursor: pointer; color: #fff;
+                border-radius: 4px; text-indent: -.3rem; transition: all .5s;
+                &:hover{
+                    background: #00b6b3;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:1260px) {
+    .heroContainer{
+        &Wrap{
+            padding: 0 3rem;
+        }
+    }
+}
+
+@media all and (max-width:540px) {
+    .heroContainer{
+        &Wrap{
+            &Text{
+                h2{
+                    font-size: 4rem; line-height: 5rem;
+                }
+                p{
+                    margin-top: 2rem; margin-bottom: 2.5rem;
+                    font-size: 1.6rem;
+                    line-height: 153.15%;
+                }
+                a{
+                    width: 13rem; height: 4rem;
+                    font-size: 1.4rem; line-height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:500px) {
+    .heroContainer{
+        .responsive{
+            display: block;
+        }
+        .normal{
+            display: none;
+        }
+        &Wrap{
+            padding: 0 2rem;
+            &Text{
+                h2{
+                    font-size: 4rem; line-height: 5rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                    line-height: 153.15%;
+                }
+                a{
+                    width: 13rem; height: 4rem;
+                    font-size: 1.4rem; line-height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:340px) {
+    .heroContainer{
+        .responsive{
+            display: block;
+        }
+        .normal{
+            display: none;
+        }
+        &Wrap{
+            padding: 0 1rem;
+            &Text{
+                h2{
+                    font-size: 3.5rem; line-height: 4rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                    line-height: 143.15%;
+                }
+                a{
+                    width: 12rem; height: 3.5rem;
+                    font-size: 1.4rem; line-height: 3.5rem;
+                }
+            }
+        }
+    }
+}
