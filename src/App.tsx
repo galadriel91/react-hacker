@@ -15,7 +15,7 @@ const App = () => {
 	const location = useLocation();
 	return (
 		<div>
-			{location.state === '' ? <HackerHeader /> : ''}
+			{location.pathname === '/' ? '' : <HackerHeader />}
 			<div className="pageWrap">
 				<Routes>
 					<Route path="/" element={<MainPage />} />

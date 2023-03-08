@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import ListPagination from 'components/list/ListPagination';
 import ListItem from 'components/list/ListItem';
 import { ListItems } from 'store/features/types';
+import ListTitle from 'components/list/ListTitle';
 
 const ListPage = () => {
 	const dispatch = useAppDispatch();
@@ -47,6 +48,7 @@ const ListPage = () => {
 
 	return (
 		<div>
+			<ListTitle />
 			<ListItem items={lists} />
 			{location.state === 'Jobs' ? null : <ListPagination />}
 		</div>

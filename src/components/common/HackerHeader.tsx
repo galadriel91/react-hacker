@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from 'assets/images/HackerNews.svg';
+import secLogo from 'assets/images/HackerNews1.svg';
 import Style from 'assets/scss/components/common/HackerHeader.module.scss';
 
 const HackerHeader = () => {
@@ -16,11 +17,15 @@ const HackerHeader = () => {
 	}, [isCheck]);
 
 	return (
-		<header>
+		<header className={location.pathname === '/' ? '' : Style.notMain}>
 			<div className={Style.headerWrap}>
 				<h1>
 					<Link to="/" state="news">
-						<img src={logo} alt="Hacker 로고 이미지" />
+						{location.pathname === '/' ? (
+							<img src={logo} alt="Hacker 로고 이미지" />
+						) : (
+							<img src={secLogo} alt="Hacker 로고 이미지" />
+						)}
 					</Link>
 				</h1>
 				<nav className={isCheck ? Style.open : ''}>

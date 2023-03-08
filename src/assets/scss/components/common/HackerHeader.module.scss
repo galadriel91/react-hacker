@@ -58,6 +58,36 @@ header{
 }
 
 
+
+header.notMain{
+    position: sticky; left: 0; top: 0; z-index: 9999; background: #F5F7FA;
+    .headerWrap{
+        nav{
+            ul{
+                li{
+                    button{
+                        background: rgba(0, 161, 157 , .15);
+                        color: rgb(0, 161, 157);
+                    }
+                    a{
+                        span{
+                            color: #34495E; 
+                            &::after{
+                                background: #34495E;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wholeMenu{
+            color: #34495e;
+        }
+    }
+}
+
+
+
 @media all and (max-width:1260px) {
     header.notMain{
         .headerWrap{
