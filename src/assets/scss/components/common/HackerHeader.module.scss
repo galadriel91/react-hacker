@@ -1,137 +1,169 @@
-// 다크 모드
-body:global(.dark){
-    header{
-        background: #000;
-    }
-}
-
 header{
-    position: sticky; left: 0; top: 0; z-index: 9999;
-    height: 6rem; background: #5684FD;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)) !important;
+    font-style: normal; font-weight: 400;
+    height: 8rem; background: transparent;
     .headerWrap{
         display: flex; justify-content: space-between; align-items: center;
-        margin: 0 auto; width: 120rem; height: 100%;
+        margin: 0 auto; max-width: 120rem; height: 100%;
         h1{
+            margin-left: .3rem;
             a{
-                display: flex; align-items: center; height: 6rem;
-                img{
-                    margin-right: 1rem;
-                    width: 3.5rem;
-                }
-                span{
-                    font-size: 2.5rem; color: #fff;
-                }
+                display: flex; align-items: center; height: 8rem;
             }
         }
         nav{
             ul{
-                font-size: 0;
+                display: flex; align-items: center;
                 li{
-                    display: inline-block; margin: 0 1rem;
+                    padding-right: 3.5rem;
                     &:last-child{
-                        margin-right: 0;
+                        padding-right: 0;
                     }
                     button{
-                        position: relative; top: .2rem;
-                        display: block; background: none; font-size: 2.5rem;
-                        color: #fff; cursor: pointer; height: 6rem;
+                        display: flex; justify-content: center; align-items: center;
+                        width: 10rem; height: 3.5rem;
+                        background: rgba(0, 0, 0, 0.2);
+                        border-radius: 4px;
+                        font-style: normal; cursor: pointer;
+                        font-weight: 400; font-size: 1.6rem; line-height: 2.4rem; color: #fff;
                     }
                     a{
-                        display: block;
+                        display: block; width: 100%;
+                        &.active{
+                            span::after{
+                                left: 0; width: 100%;
+                            }
+                        }
                         &:hover span{
                             &::after{
                                 left: 0; width: 100%;
                             }
                         }
                         span{
-                            position: relative; line-height: 6rem;
-                            font-size: 1.8rem; color: #fff; font-weight: bold;
+                            position: relative; line-height: 1.9rem;
+                            font-size: 1.6rem; color: #fff; font-weight: 400;
+                            font-family: 'Cabin' sans-serif !important; 
                             &::after{
                                 content:''; position: absolute; bottom: -3px; left: 50%; width: 0%; height: 1px; background: #fff; transition: all .5s;
                             }
-                        }
-                    }
-                    :global a.active span{
-                        &::after{
-                            left: 0; width: 100%;
                         }
                     }
                 }
             }
         }
         .wholeMenu{
-            position: fixed; z-index: 2; top: 1.25rem; right: 1rem;
+            position: absolute; z-index: 2; top: 1.25rem; right: 3rem;
             display: none; cursor: pointer; background: none; color: #fff; font-size: 3.5rem;
-        }
-        .dark{
-            position: fixed; z-index: 2; top: 1.4rem; right: 5.5rem;
-            display: none; cursor: pointer; background: none; color: #fff; font-size: 3rem;
         }
     }
 }
 
+
 @media all and (max-width:1260px) {
-    body.dark{
-        header{
+    header.notMain{
+        .headerWrap{
             nav{
-                background: #323232;
                 ul{
                     li{
-                        a{
-                            span{
-                                color: #fff;
-                                &::after{
-                                    background: #fff;
-                                }
+                        button{
+                            margin: 0 auto; 
+                            background: none; height: 2rem;
+                            color: #34495E;  font-size: 2.2rem;
+                            &:hover{
+                                opacity: .6;
                             }
+                            transition: all .5s;
                         }
                     }
                 }
             }
         }
     }
+    
     header{
+        padding: 0 3rem;
         .headerWrap{
             margin: 0 ; width: 100%;
             h1{
-                margin-left: 1rem;
+                margin-left: .3rem;
             }
             nav{
-                width: 100vw; height: 100vh; background: #fff;
+                width: 100vw; height: 100vh; background: #F5F7FA;
                 position: fixed; left: 150vw; top: 0;transition: all .5s;
                 z-index: 1;
                 &.open{
                     left: 0;
                 }
                 ul{
+                    display: block;
                     position: absolute; width: 100vw; top: 50%; transform: translateY(-50%);
                     li{
-                        margin: 2rem 0; display: block; 
+                        padding-right: 0;
+                        margin: 5rem 0; display: block; 
                         text-align: center;
                         a{
                             span{
-                                color: #000; font-size: 2.2rem;
+                                color: #34495E;  font-size: 2.2rem;
                                 &::after{
                                     background: #000; height: 1.5px;
                                 }
                             }
                         }
                         button{
-                            display: none;
+                            margin: 0 auto; 
+                            background: none; height: 2rem;
+                            color: #34495E;  font-size: 2.2rem;
+                            &:hover{
+                                opacity: .6;
+                            }
+                            transition: all .5s;
                         }
                     }
                 }
             }
             .wholeMenu{
                 display: block;
+                top: 2.2rem; 
             }
             .dark{
                 display: block;
             }
-            :global .xi-close{
+            .xi-close{
                 color: #000;
             } 
+        }
+    }
+}
+
+@media all and (max-width:670px) {
+    header{
+        height: 6rem;
+        .headerWrap{
+            .wholeMenu{
+                top: 1.5rem;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:500px) {
+    header{
+        padding: 0 2rem;
+        .headerWrap{
+            .wholeMenu{
+                right: 2rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width:340px) {
+    header{
+        padding: 0 1rem;
+        .headerWrap{
+            .wholeMenu{
+                right: 1rem;
+            }
         }
     }
 }

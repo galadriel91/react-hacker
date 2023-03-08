@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import HackerHeader from 'components/common/HackerHeader';
 import HackerFooter from 'components/common/HackerFooter';
 // import HackerLoading from 'components/common/HackerLoading';
@@ -12,9 +12,10 @@ import MainPage from 'pages/MainPage';
 import 'assets/scss/index.scss';
 
 const App = () => {
+	const location = useLocation();
 	return (
 		<div>
-			<HackerHeader />
+			{location.state === '' ? <HackerHeader /> : ''}
 			<div className="pageWrap">
 				<Routes>
 					<Route path="/" element={<MainPage />} />

@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import Style from 'assets/scss/components/main/MainHero.module.scss';
+import HackerHeader from 'components/common/HackerHeader';
 
 const MainHero = () => {
 	return (
 		<div className={Style.heroContainer}>
+			<HackerHeader />
 			<div className={Style.heroContainerWrap}>
 				<div className={Style.heroContainerWrapText}>
 					<h2>
@@ -13,7 +15,7 @@ const MainHero = () => {
 						Fastest IT Trend
 					</h2>
 					<p>
-						All-in-one place for the latest IT trends,
+						All-in-one place for the latest IT trends,&nbsp;
 						<br className={Style.responsive} />
 						Fastest,
 						<br className={Style.nomal} />
