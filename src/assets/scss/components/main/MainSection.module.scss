@@ -1,0 +1,250 @@
+.mainSection{
+    max-width: 120rem;
+    margin: 16rem auto;
+    &Top, &Middle{
+        margin-bottom: 16rem;
+    }
+    &Top, &Middle, &Bottom{
+        display: flex; justify-content: space-between; align-items: center; font-family: 'Cabin';
+        .sectionText{
+            h2{
+                font-style: normal; font-weight: 400; font-size: 5.5rem;
+                line-height: 6.7rem; color: #34495E;
+            }
+            p{
+                margin-top: 2rem;
+                font-style: normal; font-weight: 400;
+                font-size: 1.8rem; line-height: 2.6rem;
+                color: #697694;
+            }
+            a{
+                display: flex; margin-top: 3rem; align-items: center;
+                span{
+                    color: #00A19D;
+                    font-weight: 700; font-size: 1.6rem; line-height: 1.9rem;
+                }
+                img{
+                    margin-top: .3rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:1260px) {
+    .mainSection{
+        padding: 0 3rem; box-sizing: border-box;
+    }
+}
+
+@media all and (max-width:1180px) {
+    .mainSection{
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media all and (max-width:1080px) {
+    .mainSection{
+        margin: 12rem auto;
+        &Top, &Middle{
+            margin-bottom: 12rem;
+        }
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 45%;
+            }
+            .sectionText{
+                h2{
+                    font-size: 5rem; line-height: 6rem;
+                }
+                p{
+                    margin-top: 1.8rem;
+                    font-size: 1.6rem; line-height: 2.4rem;
+                }
+                a{
+                    margin-top: 2.8rem;
+                    span{
+                        font-size: 1.6rem; line-height: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width:960px) {
+    .mainSection{
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 40%;
+            }
+            .sectionText{
+                h2{
+                    font-size: 4.5rem; line-height: 5.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:850px) {
+    .mainSection{
+        margin: 10rem auto;
+        &Top, &Middle{
+            margin-bottom: 10rem;
+        }
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 35%;
+            }
+            .sectionText{
+                h2{
+                    font-size: 4rem; line-height: 4.5rem;
+                }
+                p{
+                    margin-top: 1.4rem;
+                    font-size: 1.5rem; line-height: 2.2rem;
+                }
+                a{
+                    margin-top: 2rem;
+                    span{
+                        font-size: 1.6rem; line-height: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:700px) {
+    .mainSection{
+        &Top, &Middle, &Bottom{
+            .sectionText{
+                h2{
+                    font-size: 3.5rem; line-height: 4rem;
+                }
+                p{
+                    margin-top: 1.4rem;
+                    font-size: 1.4rem; line-height: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:660px) {
+    .mainSection{
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 30%;
+            }
+            .sectionText{
+                h2{
+                    font-size: 3.5rem; line-height: 4rem;
+                }
+                p{
+                    margin-top: 1.4rem;
+                    font-size: 1.4rem; line-height: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:615px) {
+    .mainSection{
+        &Top, &Middle, &Bottom{
+            .sectionImage{
+                width: 40%;
+            }
+            .sectionText{
+                br{
+                    display: none;
+                    &.responsive{
+                        display: block;
+                    }
+                    &.spBlock{
+                        display: block;
+                    }
+                }
+                width: 50%;
+                h2{
+                    font-size: 3.5rem; line-height: 4rem;
+                }
+                p{
+                    margin-top: 1.4rem;
+                    font-size: 1.4rem; line-height: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:565px) {
+    .mainSection{
+        margin: 8rem auto;
+        padding: 0 2rem;
+        &Top, &Middle, &Bottom{
+            display: block;
+            .sectionImage{
+                width: 100%;
+            }
+            .sectionText{
+                margin-top: 2.5rem;
+                max-width: 50rem;
+                width: 100%;
+                h2{
+                    font-size: 3.8rem; line-height: 4.5rem;
+                }
+                p{
+                    margin-top: 1.6rem;
+                    font-size: 1.6rem; line-height: 2.8rem;
+                }
+            }
+        }
+        &Top, &Middle{
+            margin-bottom: 3rem;
+        }
+        &Top, &Bottom{
+            display: flex; flex-direction: column;
+            .sectionText{
+                order: 1;
+                max-width: 50rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media all and (max-width:360px) {
+    .mainSection{
+        padding: 0 1rem;
+        &Top, &Middle, &Bottom{
+            display: block;
+            .sectionImage{
+                width: 100%;
+            }
+            .sectionText{
+                margin-top: 2.5rem;
+                max-width: 50rem;
+                width: 100%;
+                h2{
+                    font-size: 3.5rem; line-height: 4rem;
+                }
+            }
+        }
+        &Top, &Bottom{
+            display: flex; flex-direction: column;
+            .sectionText{
+                order: 1;
+            }
+        }
+    }
+}
