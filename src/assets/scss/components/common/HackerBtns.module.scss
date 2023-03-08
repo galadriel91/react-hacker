@@ -1,12 +1,5 @@
-body:global(.dark){
-    .btnWrap{
-        background: #323232;
-    }
-}
-
-
 .btnWrap{
-    position: fixed; right: 3%; bottom: 5%; background: #fff; 
+    position: fixed; right: 3%; bottom: 5%; background: #fff; border-radius: 4px;
     width: 7rem;
     .remoteWrap{
         height: 5rem;

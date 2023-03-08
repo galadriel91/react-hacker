@@ -19,8 +19,8 @@ const ListTitle = () => {
 		<div className={Style.titleWrap}>
 			<h2>{getTitleName()}</h2>
 			<p>
-				latest IT trends, news, tips, insights, and
-				<br className={Style.responsvie} />
+				latest IT trends, news, tips, insights, and&nbsp;
+				<br className={Style.responsive} />
 				resources, jobs, check it out here.
 			</p>
 			<span />

@@ -10,16 +10,11 @@ type ItemProps = {
 const ListItem = ({ items }: ItemProps) => {
 	const params = useParams();
 
-	const nowIndex = useCallback(() => {
-		return (Number(params.id) - 1) * 30;
-	}, [params.id]);
-
 	return (
-		<ul>
+		<ul className={Style.listWrap}>
 			{items.map((item, index) => (
 				<li key={index} className={Style.itemContainer}>
 					<div className={Style.itemWrap}>
-						<span className={Style.indexNumber}>{index + 1 + nowIndex()}</span>
 						<div className={Style.itemInfo}>
 							<div className={Style.itemInfoTitleWrap}>
 								{item.domain ? (

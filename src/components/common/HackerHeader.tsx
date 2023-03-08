@@ -34,7 +34,7 @@ const HackerHeader = () => {
 							<Link
 								to="/news/1"
 								state="news"
-								className={location.state === 'news' ? Style.actvie : ''}
+								className={location.pathname.includes('news') ? Style.active : ''}
 							>
 								<span>News</span>
 							</Link>
@@ -43,7 +43,7 @@ const HackerHeader = () => {
 							<Link
 								to="/ask/1"
 								state="ask"
-								className={location.state === 'ask' ? Style.actvie : ''}
+								className={location.pathname.includes('ask') ? Style.active : ''}
 							>
 								<span>Ask</span>
 							</Link>
@@ -52,7 +52,7 @@ const HackerHeader = () => {
 							<Link
 								to="/jobs/1"
 								state="jobs"
-								className={location.state === 'jobs' ? Style.actvie : ''}
+								className={location.pathname.includes('jobs') ? Style.active : ''}
 							>
 								<span>Jobs</span>
 							</Link>
@@ -61,7 +61,7 @@ const HackerHeader = () => {
 							<Link
 								to="/show/1"
 								state="show"
-								className={location.state === 'show' ? Style.actvie : ''}
+								className={location.pathname.includes('show') ? Style.active : ''}
 							>
 								<span>Show</span>
 							</Link>

@@ -1,54 +1,10 @@
-body:global(.dark){
-    ul{
-        .itemContainer{
-            background: #323232;
-            border-bottom: 1px solid #AFAFAF;
-            .itemWrap{
-                .indexNumber{
-                    color: #AFAFAF;
-                }
-                .itemInfo{
-                    &TitleWrap{
-                        p{
-                            &:hover{
-                                a{
-                                    color: #e3e3e3;
-                                }
-                            }
-                            &:hover +span{
-                                color: #e3e3e3;
-                            }
-                            a{
-                                color: #AFAFAF;
-                            }
-                        }
-                    }
-                    &ContentWrap{
-                        span{
-                            color: #AFAFAF;
-                        }
-                        div{
-                            a{
-                                color: #858585;
-                                &:hover{
-                                    color: #e3e3e3;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            &:hover{
-                background: #5a5a5a;
-            }
-        }
-    }
-}
-
-
-ul{
+.listWrap{
+    max-width: 120rem; margin: 4rem auto 0;
     .itemContainer{
-        background: #fff; transition: all .5s;
+        &:first-child{
+            border-top: 1px solid #ddd;
+        }
+        background: #F5F7FA; transition: all .5s;
         height: 8rem; border-bottom: 1px solid #ddd;
         &:hover{
             background: #FEF9EF;
@@ -58,13 +14,8 @@ ul{
         }
         .itemWrap{
             display: flex; align-items: center; 
-            width: 120rem; height: 100%; margin: 0 auto;
-            .indexNumber{
-                width: 3.5rem; text-align: center;
-                font-size: 1.6rem; font-weight: bold; color: #000;
-            }
+            height: 100%;
             .itemInfo{
-                margin-left: 3.5rem;
                 &TitleWrap{
                     p{
                         &:hover{
@@ -77,7 +28,7 @@ ul{
                         }
                         margin-right: .5rem;
                         a{
-                            font-size: 1.8rem; font-weight: bold; color: #000;
+                            font-size: 1.8rem; font-weight: 400; color: #34495E;
                         }
                     }
                 }
@@ -85,12 +36,12 @@ ul{
                     margin-top: .5rem;
                     display: flex; align-items: center; 
                     span{
-                        font-size: 1.4rem; color: #000; font-weight: bold; 
+                        font-size: 1.4rem; color: #000; font-weight: 400; 
                     }
                     div{
                         a{
                             margin: 0 .5rem;
-                            font-size: 1.4rem; color: #777; font-weight: bold;
+                            font-size: 1.4rem; color: #777; font-weight: 400;
                             &:hover{
                                 color: #396EB0;
                             }
