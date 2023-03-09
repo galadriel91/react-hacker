@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
 import Style from 'assets/scss/components/main/MainHero.module.scss';
 import HackerHeader from 'components/common/HackerHeader';
+import { useAppDispatch } from 'store/hooks';
+import { OFF_LOADING } from 'store/features/items';
+import mainBg from 'assets/images/mainBg.jpg';
 
 const MainHero = () => {
+	const dispatch = useAppDispatch();
+	const loadImage = () => {
+		dispatch(OFF_LOADING());
+	};
 	return (
 		<div className={Style.heroContainer}>
 			<HackerHeader />
@@ -24,6 +31,7 @@ const MainHero = () => {
 					<a href="https://news.ycombinator.com/login?goto=news">Sign Up</a>
 				</div>
 			</div>
+			<img className="loadingimg" src={mainBg} alt="이미지" onLoad={loadImage} />
 		</div>
 	);
 };

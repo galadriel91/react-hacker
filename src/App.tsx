@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import HackerHeader from 'components/common/HackerHeader';
 import HackerFooter from 'components/common/HackerFooter';
-// import HackerLoading from 'components/common/HackerLoading';
+import HackerLoading from 'components/common/HackerLoading';
 import HackerButtons from 'components/common/HackerButtons';
 import ListPage from 'pages/ListPage';
 import UserPage from 'pages/UserPage';
@@ -29,7 +29,7 @@ const App = () => {
 				</Routes>
 			</div>
 			<HackerFooter />
-			{/* <HackerLoading /> */}
+			<HackerLoading />
 			<HackerButtons />
 		</div>
 	);

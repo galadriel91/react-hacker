@@ -40,3 +40,11 @@ button{
 .pageWrap{
     min-height: 60vh;
 }
+
+.loadingimg{
+    position:absolute; 
+    width:0; 
+    height:0; 
+    overflow:hidden; 
+    z-index:-1;
+}
