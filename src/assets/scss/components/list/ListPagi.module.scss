@@ -36,13 +36,23 @@
     }
 }
 
+@media all and (max-width:1000px) {
+    .listContainer{
+        height: 8rem;
+    }
+}
+
+
+
 @media all and (max-width:500px) {
     .listContainer{
-        height: 4rem;
         ul{
             li{
+                button{
+                    font-size: 1.6rem;
+                }
                 a{
-                    line-height: 4rem; font-size: 1.4rem;
+                    font-size: 1.6rem;
                 }
             }
         }
