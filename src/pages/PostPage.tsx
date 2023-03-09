@@ -19,11 +19,13 @@ const PostPage = () => {
 			const response = await dispatch(FETCH_POST(params.id as string));
 			const payload = response.payload as PostsItem;
 			if (payload === null) {
-				navigate('/404');
+				navigate('/404', { replace: true });
 			} else {
 				return true;
 			}
-		} catch (err) {}
+		} catch (err) {
+			navigate('/404', { replace: true });
+		}
 	};
 
 	useEffect(() => {

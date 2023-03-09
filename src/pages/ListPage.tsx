@@ -33,10 +33,10 @@ const ListPage = () => {
 			if (payload.length > 1) {
 				return true;
 			} else {
-				navigate('/404');
+				navigate('/404', { replace: true });
 			}
 		} catch (err) {
-			navigate('/404');
+			navigate('/404', { replace: true });
 		}
 	};
 

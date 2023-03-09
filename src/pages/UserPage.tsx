@@ -16,12 +16,14 @@ const UserPage = () => {
 		try {
 			const response = await dispatch(FETCH_USER(params.id as string));
 			const payload = response.payload as UserItems;
-			if (payload === null) {
-				navigate('/404');
+			if (payload === null || payload === undefined) {
+				navigate('/404', { replace: true });
 			} else {
 				return true;
 			}
-		} catch (err) {}
+		} catch (err) {
+			navigate('/404', { replace: true });
+		}
 	};
 
 	useEffect(() => {
