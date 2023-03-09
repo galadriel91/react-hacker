@@ -1,11 +1,17 @@
-import React, { useCallback } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { SET_INDEXNUM, SET_CURRENT } from 'store/features/common';
 import { Link } from 'react-router-dom';
 import Style from 'assets/scss/components/list/ListPagi.module.scss';
 
 const ListPagination = () => {
+	const navigate = useNavigate();
 	const params = useParams();
 	const location = useLocation();
+	const dispatch = useAppDispatch();
+	const currentPage = useAppSelector(state => state.common.currentPage);
+	const indexNum = useAppSelector(state => state.common.indexNum);
 
 	const getTitleName = useCallback(() => {
 		if (location.pathname.includes('news')) {
@@ -21,30 +27,68 @@ const ListPagination = () => {
 
 	const pageLength = useCallback(() => {
 		if (location.pathname.includes('news')) {
-			return Array(10).fill('');
+			return Array(10)
+				.fill('')
+				.map((v, i) => (v = i + 1));
 		} else if (location.pathname.includes('ask')) {
-			return Array(2).fill('');
+			return Array(2)
+				.fill('')
+				.map((v, i) => (v = i + 1));
 		} else if (location.pathname.includes('show')) {
-			return Array(2).fill('');
+			return Array(2)
+				.fill('')
+				.map((v, i) => (v = i + 1));
 		} else {
-			return Array(1).fill('');
+			return Array(1)
+				.fill('')
+				.map((v, i) => (v = i + 1));
 		}
 	}, [location.state]);
+
+	const onClickPrev = useCallback(() => {
+		dispatch(SET_INDEXNUM(-3));
+		dispatch(SET_CURRENT());
+		navigate(`/${getTitleName()}/${currentPage}`);
+	}, [indexNum, currentPage]);
+
+	const onClickNext = useCallback(() => {
+		dispatch(SET_INDEXNUM(3));
+		dispatch(SET_CURRENT());
+		navigate(`/${getTitleName()}/${currentPage}`);
+	}, [indexNum, currentPage]);
+
+	useEffect(() => {}, [currentPage]);
 
 	return pageLength().length === 1 ? null : (
 		<div className={Style.listContainer}>
 			<ul>
-				{pageLength().map((v, index) => (
-					<li key={index}>
-						<Link
-							to={`/${getTitleName()}/${index + 1}`}
-							state={getTitleName()}
-							className={Number(params.id) === index + 1 ? Style.active : ''}
-						>
-							{index + 1}
-						</Link>
+				{getTitleName() === 'news' && currentPage > 3 ? (
+					<li className={Style.prevBtn}>
+						<button className="xi-angle-left" onClick={onClickPrev} />
 					</li>
-				))}
+				) : (
+					''
+				)}
+				{pageLength()
+					.slice(0 + indexNum, 3 + indexNum)
+					.map((v, index) => (
+						<li key={index}>
+							<Link
+								to={`/${getTitleName()}/${v}`}
+								state={getTitleName()}
+								className={Number(params.id) === v ? Style.active : ''}
+							>
+								{v}
+							</Link>
+						</li>
+					))}
+				{getTitleName() === 'news' && currentPage < 10 ? (
+					<li className={Style.nextBtn}>
+						<button className="xi-angle-right" onClick={onClickNext} />
+					</li>
+				) : (
+					''
+				)}
 			</ul>
 		</div>
 	);

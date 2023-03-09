@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Style from 'assets/scss/components/main/MainSection.module.scss';
 import news from 'assets/images/news.jpg';
 import sectionOne from 'assets/images/section1.jpg';

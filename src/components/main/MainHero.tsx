@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Style from 'assets/scss/components/main/MainHero.module.scss';
 import HackerHeader from 'components/common/HackerHeader';
 import { useAppDispatch } from 'store/hooks';
