@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import logo from 'assets/images/HackerNews.svg';
 import Style from 'assets/scss/components/common/HackerFooter.module.scss';
 
 const HackerFooter = () => {
+	const location = useLocation();
+	const footerMargin = useCallback(() => {
+		if (location.pathname === '/404') {
+			return Style.not;
+		} else if (location.pathname.includes('job')) {
+			return Style.job;
+		} else if (location.pathname.includes('user') || location.pathname.includes('post')) {
+			return Style.detail;
+		} else {
+			return Style.footer;
+		}
+	}, [location.pathname]);
+
 	return (
-		<footer className={Style.footer}>
+		<footer className={footerMargin()}>
 			<div className={Style.footerWrap}>
 				<div className={Style.footerTop}>
 					<div className={Style.footerLeft}>
