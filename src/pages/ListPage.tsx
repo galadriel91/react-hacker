@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
+import ListItem from 'components/list/ListItem';
+import ListPagination from 'components/list/ListPagination';
+import ListTitle from 'components/list/ListTitle';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { useLocation } from 'react-router-dom';
 import { FETCH_LIST } from 'store/features/sync';
 import { useNavigate } from 'react-router-dom';
 import { ListItems } from 'store/features/types';
-import ListItem from 'components/list/ListItem';
-import ListPagination from 'components/list/ListPagination';
-import ListTitle from 'components/list/ListTitle';
 
 const ListPage = () => {
 	const dispatch = useAppDispatch();

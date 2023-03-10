@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
 import logo from 'assets/images/HackerNews.svg';
 import Style from 'assets/scss/components/common/HackerFooter.module.scss';
+import { useLocation } from 'react-router-dom';
 
 const HackerFooter = () => {
 	const location = useLocation();

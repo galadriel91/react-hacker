@@ -1,7 +1,7 @@
 import React from 'react';
-import { PostsItem } from 'store/features/types';
-import { Link } from 'react-router-dom';
 import Style from 'assets/scss/components/post/CommentsItem.module.scss';
+import { Link } from 'react-router-dom';
+import { PostsItem } from 'store/features/types';
 
 type ItemProps = {
 	isFirst: boolean;

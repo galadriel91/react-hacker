@@ -1,6 +1,6 @@
 import React from 'react';
-import { PostsItem } from 'store/features/types';
 import Style from 'assets/scss/components/post/PostContents.module.scss';
+import { PostsItem } from 'store/features/types';
 
 type ItemProps = {
 	item: PostsItem;

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
 import Style from 'assets/scss/components/list/ListTitle.module.scss';
+import { useLocation } from 'react-router-dom';
 
 const ListTitle = () => {
 	const location = useLocation();

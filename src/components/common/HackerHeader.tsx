@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import logo from 'assets/images/HackerNews.svg';
 import secLogo from 'assets/images/HackerNews1.svg';
 import Style from 'assets/scss/components/common/HackerHeader.module.scss';
+import { Link, useLocation } from 'react-router-dom';
 
 const HackerHeader = () => {
 	const location = useLocation();
