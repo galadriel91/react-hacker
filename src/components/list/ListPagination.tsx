@@ -10,6 +10,8 @@ const ListPagination = () => {
 	const params = useParams();
 	const location = useLocation();
 	const dispatch = useAppDispatch();
+	const [plus, setPlus] = useState(0);
+	const [minus, setMinus] = useState(0);
 	const currentPage = useAppSelector(state => state.common.currentPage);
 	const indexNum = useAppSelector(state => state.common.indexNum);
 
@@ -46,18 +48,30 @@ const ListPagination = () => {
 	}, [location.state]);
 
 	const onClickPrev = useCallback(() => {
+		setMinus(minus - 1);
 		dispatch(SET_INDEXNUM(-3));
 		dispatch(SET_CURRENT());
-		navigate(`/${getTitleName()}/${currentPage}`);
-	}, [indexNum, currentPage]);
+	}, [minus]);
 
 	const onClickNext = useCallback(() => {
+		setPlus(plus + 1);
 		dispatch(SET_INDEXNUM(3));
 		dispatch(SET_CURRENT());
-		navigate(`/${getTitleName()}/${currentPage}`);
-	}, [indexNum, currentPage]);
+	}, [plus]);
 
-	useEffect(() => {}, [currentPage]);
+	useEffect(() => {
+		if (minus === 0) {
+			return;
+		}
+		navigate(`/${getTitleName()}/${currentPage}`);
+	}, [minus]);
+
+	useEffect(() => {
+		if (plus === 0) {
+			return;
+		}
+		navigate(`/${getTitleName()}/${currentPage}`);
+	}, [plus]);
 
 	return pageLength().length === 1 ? null : (
 		<div className={Style.listContainer}>

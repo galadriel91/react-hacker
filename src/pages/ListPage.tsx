@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import ListItem from 'components/list/ListItem';
 import ListPagination from 'components/list/ListPagination';
 import ListTitle from 'components/list/ListTitle';
+import { INIT_INDEX, INIT_CURRENT } from 'store/features/common';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { useLocation } from 'react-router-dom';
 import { FETCH_LIST } from 'store/features/sync';
@@ -39,6 +40,11 @@ const ListPage = () => {
 			navigate('/404', { replace: true });
 		}
 	};
+
+	useEffect(() => {
+		dispatch(INIT_INDEX());
+		dispatch(INIT_CURRENT());
+	}, [getTitleName()]);
 
 	useEffect(() => {
 		handldeFetch();

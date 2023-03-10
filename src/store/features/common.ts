@@ -16,8 +16,14 @@ export const commonSlice = createSlice({
 		SET_CURRENT: state => {
 			state.currentPage = state.indexNum + 1;
 		},
+		INIT_INDEX: state => {
+			state.indexNum = 0;
+		},
+		INIT_CURRENT: state => {
+			state.currentPage = 1;
+		},
 	},
 });
 
-export const { SET_INDEXNUM, SET_CURRENT } = commonSlice.actions;
+export const { SET_INDEXNUM, SET_CURRENT, INIT_INDEX, INIT_CURRENT } = commonSlice.actions;
 export default commonSlice.reducer;
