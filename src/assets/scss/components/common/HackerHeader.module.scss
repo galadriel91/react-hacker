@@ -21,7 +21,7 @@ header{
                     button{
                         display: flex; justify-content: center; align-items: center;
                         width: 10rem; height: 3.5rem;
-                        background: rgba(0, 0, 0, 0.2);
+                        background: rgba(255, 255, 255, 0.3);
                         border-radius: 4px;
                         font-style: normal; cursor: pointer;
                         font-weight: 400; font-size: 1.6rem; line-height: 2.4rem; color: #fff;
@@ -54,6 +54,9 @@ header{
             position: absolute; z-index: 2; top: 1.25rem; right: 3rem;
             display: none; cursor: pointer; background: none; color: #fff; font-size: 3.5rem;
         }
+        .xi-close{
+            color: #505D7D; 
+        } 
     }
 }
 
@@ -67,13 +70,13 @@ header.notMain{
                 li{
                     button{
                         background: rgba(86, 132, 253, 0.15);
-                        color: rgb(86, 132, 253)
+                        color: rgb(86, 132, 253);
                     }
                     a{
                         span{
-                            color: #34495E; 
+                            color: #505D7D;
                             &::after{
-                                background: #34495E;
+                                background: #505D7D;
                             }
                         }
                     }
@@ -81,7 +84,7 @@ header.notMain{
             }
         }
         .wholeMenu{
-            color: #34495e;
+            color: #505D7D;
         }
     }
 }
@@ -97,7 +100,7 @@ header.notMain{
                         button{
                             margin: 0 auto; 
                             background: none; height: 2rem;
-                            color: #34495E;  font-size: 2.2rem;
+                            color: #505D7D;  font-size: 2.2rem;
                             &:hover{
                                 opacity: .6;
                             }
@@ -132,7 +135,7 @@ header.notMain{
                         text-align: center;
                         a{
                             span{
-                                color: #34495E;  font-size: 2.2rem;
+                                color: #505D7D;  font-size: 2.2rem;
                                 &::after{
                                     background: #000; height: 1.5px;
                                 }
@@ -141,7 +144,7 @@ header.notMain{
                         button{
                             margin: 0 auto; 
                             background: none; height: 2rem;
-                            color: #34495E;  font-size: 2.2rem;
+                            color: #505D7D;  font-size: 2.2rem;
                             &:hover{
                                 opacity: .6;
                             }
@@ -154,11 +157,8 @@ header.notMain{
                 display: block;
                 top: 2.2rem; 
             }
-            .dark{
-                display: block;
-            }
             .xi-close{
-                color: #000;
+                color: #505D7D; 
             } 
         }
     }
