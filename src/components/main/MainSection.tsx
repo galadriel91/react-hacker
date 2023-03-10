@@ -1,8 +1,8 @@
 import React from 'react';
 import Style from 'assets/scss/components/main/MainSection.module.scss';
-import news from 'assets/images/news.jpg';
-import sectionOne from 'assets/images/section1.jpg';
-import sectionTwo from 'assets/images/section2.jpg';
+import news from 'assets/images/news.png';
+import sectionOne from 'assets/images/section2.png';
+import sectionTwo from 'assets/images/section1.png';
 import right from 'assets/images/right.svg';
 import { Link } from 'react-router-dom';
 
