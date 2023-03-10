@@ -1,22 +1,22 @@
 .innerContainer{
     .innerInfo{
         .arrow{
-            font-size: 2rem; color: #00A19D
+            font-size: 2rem; color: #5684FD;
         }
         margin:1.5rem 0 ; padding: 1rem; box-sizing: border-box;
         border: 2px solid rgba(52, 73, 94 , .4); border-radius: .5rem;
         .userInfo{
             display: flex; align-items: center;
             p{
-                font-size: 5rem; color: #34495E;
+                font-size: 5rem; color: #505D7D;
             }
             div{
                 margin-left: 1rem;
                 a{
                     display: inline-block; margin-bottom: .3rem;
-                    font-size: 1.6rem; color: #34495E; transition: all .5s;
+                    font-size: 1.6rem; color: #505D7D; transition: all .5s;
                     &:hover{
-                        color: #00A19D;
+                        color: #5684FD;
                     }
                 }
                 span{

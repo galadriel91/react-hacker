@@ -22,12 +22,12 @@
             }
             a{
                 display: flex; align-items: center; justify-content: center;
-                width: 15rem; height: 5rem; background: #00A19D;
+                width: 15rem; height: 5rem; background: #5684FD;
                 font-weight: 400; font-size: 1.6rem; line-height: 2.4rem;
                 cursor: pointer; color: #fff;
                 border-radius: 4px; text-indent: -.3rem; transition: all .5s;
                 &:hover{
-                    background: #00b6b3;
+                    background: #6692ff;
                 }
             }
         }
