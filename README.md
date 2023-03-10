@@ -79,5 +79,5 @@ React 를 이용하여 Hacker-News Viewer를 구현.
 
   
 ## Update
- - 22.12.14 - Dark Mode 스타일 적용
+ - 22.03.10 - Update Style
 
