@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from 'assets/scss/components/main/MainHero.module.scss';
 import HackerHeader from 'components/common/HackerHeader';
-import mainBg from 'assets/images/mainBg.jpg';
+import mainBg from 'assets/images/mainBg.png';
 import { useAppDispatch } from 'store/hooks';
 import { OFF_LOADING } from 'store/features/items';
 
