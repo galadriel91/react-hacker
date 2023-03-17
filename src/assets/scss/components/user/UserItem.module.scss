@@ -36,8 +36,9 @@
 
 @media all and (max-width:1220px) {
     .userWrap{
+        padding-top: 0;
         :global .xi-user-address{
-            margin-left: 1.5rem;
+            margin-left: 2rem;
         }
         .userInfo{
             h4{
@@ -60,5 +61,36 @@
         div{
             font-size: 1.5rem; line-height: 2.2rem;
         }
+    }
+}
+
+@media all and (max-width:500px) {
+    .userWrap{
+        padding-top: 1rem;
+        :global .xi-user-address{
+            margin-left: 1rem;
+        }
+    }
+    .userDesc{
+        padding: 0 2rem; 
+        span{
+            margin-top: 0;
+        }
+        div{
+            margin-top: .5rem;
+        }
+    }
+}
+
+
+@media all and (max-width:340px) {
+    .userWrap{
+        padding-top: 0;
+        :global .xi-user-address{
+            margin-left: 0;
+        }
+    }
+    .userDesc{
+        padding: 0 1rem; 
     }
 }
