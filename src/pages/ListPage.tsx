@@ -57,7 +57,7 @@ const ListPage = () => {
 		handldeFetch();
 		const name = getTitleName();
 		document.title = `${name} | Hacker News `;
-	}, []);
+	}, [location.pathname]);
 
 	useEffect(() => {
 		if (Number(location.pathname[location.pathname.length - 1]) >= 10) {
