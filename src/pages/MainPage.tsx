@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import MainHero from 'components/main/MainHero';
-import MainSection from 'components/main/MainSection';
 import secLogo from 'assets/images/HackerNews1.svg';
+import MainSection from 'components/main/MainSection';
 
 const MainPage = () => {
 	useEffect(() => {

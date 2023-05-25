@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { PostsItem } from 'store/features/types';
+import { FETCH_POST } from 'store/features/sync';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
 import PostContents from 'components/post/PostContents';
 import PostComments from 'components/post/PostComments';
 import UserItem from 'components/user/UserItem';
 import Style from 'assets/scss/pages/PostPage.module.scss';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { FETCH_POST } from 'store/features/sync';
-import { useParams, useNavigate } from 'react-router-dom';
-import { PostsItem } from 'store/features/types';
 
 const PostPage = () => {
 	const navigate = useNavigate();

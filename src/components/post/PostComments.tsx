@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { PostsItem } from 'store/features/types';
 import CommentsItem from './CommentsItem';
 import Style from 'assets/scss/components/post/PostComments.module.scss';
-import { PostsItem } from 'store/features/types';
 
 type ItemProps = {
 	item: PostsItem;

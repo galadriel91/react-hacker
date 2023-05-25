@@ -1,6 +1,6 @@
-import React, { useCallback, useState, useEffect } from 'react';
-import Style from 'assets/scss/components/common/GoupBtn.module.scss';
+import { useCallback, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Style from 'assets/scss/components/common/HackerUpBtn.module.scss';
 
 const HackerUpbtn = () => {
 	const location = useLocation();

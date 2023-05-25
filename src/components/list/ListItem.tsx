@@ -1,15 +1,13 @@
-import React, { useCallback } from 'react';
-import Style from 'assets/scss/components/list/ListItem.module.scss';
-import { Link, useParams } from 'react-router-dom';
 import { ListItems } from 'store/features/types';
+import { Link, useParams } from 'react-router-dom';
+import React from 'react';
+import Style from 'assets/scss/components/list/ListItem.module.scss';
 
 type ItemProps = {
 	items: ListItems[];
 };
 
 const ListItem = ({ items }: ItemProps) => {
-	const params = useParams();
-
 	return (
 		<ul className={Style.listWrap}>
 			{items.map((item, index) => (

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAppSelector } from 'store/hooks';
 import Style from 'assets/scss/components/common/HackerLoading.module.scss';
 

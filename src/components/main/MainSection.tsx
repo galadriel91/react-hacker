@@ -1,10 +1,9 @@
-import React from 'react';
-import Style from 'assets/scss/components/main/MainSection.module.scss';
-import news from 'assets/images/news.png';
-import sectionOne from 'assets/images/section2.png';
-import sectionTwo from 'assets/images/section1.png';
-import right from 'assets/images/right.svg';
 import { Link } from 'react-router-dom';
+import news from 'assets/images/news.png';
+import right from 'assets/images/right.svg';
+import sectionTwo from 'assets/images/section1.png';
+import sectionOne from 'assets/images/section2.png';
+import Style from 'assets/scss/components/main/MainSection.module.scss';
 
 const MainSection = () => {
 	return (

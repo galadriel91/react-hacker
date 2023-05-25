@@ -1,13 +1,13 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import ListItem from 'components/list/ListItem';
-import ListPagination from 'components/list/ListPagination';
-import ListTitle from 'components/list/ListTitle';
-import { INIT_INDEX, INIT_CURRENT, SET_CURRENT, SET_INDEXNUM } from 'store/features/common';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FETCH_LIST } from 'store/features/sync';
 import { useNavigate } from 'react-router-dom';
 import { ListItems } from 'store/features/types';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { INIT_INDEX, INIT_CURRENT, SET_CURRENT, SET_INDEXNUM } from 'store/features/common';
+import ListItem from 'components/list/ListItem';
+import ListPagination from 'components/list/ListPagination';
+import ListTitle from 'components/list/ListTitle';
 
 const ListPage = () => {
 	const dispatch = useAppDispatch();

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Style from 'assets/scss/pages/NotPage.module.scss';
+import { useEffect } from 'react';
 import { useAppDispatch } from 'store/hooks';
 import { OFF_LOADING } from 'store/features/items';
+import Style from 'assets/scss/pages/NotPage.module.scss';
 
 const NotPage = () => {
 	const dispatch = useAppDispatch();

@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Style from 'assets/scss/components/list/ListPagi.module.scss';
+import { Link } from 'react-router-dom';
+import { useCallback, useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { SET_INDEXNUM, SET_CURRENT } from 'store/features/common';
-import { Link } from 'react-router-dom';
+import Style from 'assets/scss/components/list/ListPagi.module.scss';
 
 const ListPagination = () => {
 	const navigate = useNavigate();

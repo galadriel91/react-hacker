@@ -1,11 +1,12 @@
-import React from 'react';
-import Style from 'assets/scss/components/user/UserItem.module.scss';
 import { Link } from 'react-router-dom';
 import { UserItems, PostsItem } from 'store/features/types';
+import React from 'react';
+import Style from 'assets/scss/components/user/UserItem.module.scss';
 
 type ItemProps = {
 	item: UserItems | PostsItem;
 };
+
 const UserItem = ({ item }: ItemProps) => {
 	const isUserItems = (typeOfProp: UserItems | PostsItem): typeOfProp is UserItems => {
 		return 'karma' in typeOfProp;

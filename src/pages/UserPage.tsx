@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import UserItem from 'components/user/UserItem';
-import Style from 'assets/scss/pages/UserPage.module.scss';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { FETCH_USER } from 'store/features/sync';
 import { UserItems } from 'store/features/types';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { useParams, useNavigate } from 'react-router-dom';
+import UserItem from 'components/user/UserItem';
+import Style from 'assets/scss/pages/UserPage.module.scss';
 
 const UserPage = () => {
 	const user = useAppSelector(state => state.items.user);
