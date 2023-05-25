@@ -8,6 +8,12 @@
     .userInfo{
         h4{
             font-size: 1.8rem; font-weight: normal; color: #505D7D; 
+            &:hover a{
+                color: #5684FD;
+            }
+            a{
+                transition: all .5s;
+            }
         }
         p{
             font-size: 1.6rem; color: #666;
