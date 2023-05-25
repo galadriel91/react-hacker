@@ -3,7 +3,7 @@
         .arrow{
             font-size: 2rem; color: #5684FD;
         }
-        margin:1.5rem 0 ; padding: 1rem; box-sizing: border-box;
+        margin: 1.5rem 0 ; padding: 1rem; box-sizing: border-box;
         border: 2px solid rgba(80, 93, 125 , .4); border-radius: .5rem;
         .userInfo{
             display: flex; align-items: center;
@@ -13,15 +13,17 @@
             div{
                 margin-left: 1rem;
                 a{
-                    display: inline-block; margin-bottom: .3rem;
-                    font-size: 1.6rem; color: #505D7D; transition: all .5s;
+                    margin-bottom: .3rem;
+                    display: inline-block; 
+                    font-size: 1.6rem; color: #505D7D; 
+                    transition: all .5s;
                     &:hover{
                         color: #5684FD;
                     }
                 }
                 span{
-                    font-size: 1.4rem; color: #777;
                     display: block;
+                    font-size: 1.4rem; color: #777;
                 }
             }
         }

@@ -12,8 +12,10 @@ html{
 }
 
 body{
-    overflow-x: hidden; box-sizing: border-box;
-    font-family: 'Cabin'; font-weight: 400; font-size: 1rem;  background: #F5F7FA;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+    background: #F5F7FA;
+    font-family: 'Cabin'; font-weight: 400; font-size: 1rem;  
     &::-webkit-scrollbar {
         background-color: transparent;
         width: 10px;
@@ -36,11 +38,10 @@ button{
 }
 
 .loadingimg{
-    position:absolute; 
+    overflow:hidden; 
+    position:absolute; z-index:-1;
     width:0; 
     height:0; 
-    overflow:hidden; 
-    z-index:-1;
 }
 
 .xi-close{

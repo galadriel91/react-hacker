@@ -1,36 +1,40 @@
 .userWrap{
-    margin-left: -.1rem;
-    padding-top: 2rem; display: flex; align-items: center;
+    margin-left: -.1rem; padding-top: 2rem; 
+    display: flex; align-items: center;
     :global .xi-user-address{
-        font-size: 10rem; color: #505D7D; margin-left: -1rem;
+        margin-left: -1rem;
+        font-size: 10rem; color: #505D7D; 
     }
     .userInfo{
         h4{
-            font-size: 1.8rem; color: #505D7D; font-weight: normal;
+            font-size: 1.8rem; font-weight: normal; color: #505D7D; 
         }
         p{
             font-size: 1.6rem; color: #666;
         }
         span{
-            display: inline-block; margin: .5rem 0;
+            margin: .5rem 0;
+            display: inline-block;
             font-size: 1.6rem; color: #444;
         }
     }
 }
 .userDesc{
-    margin:1rem 0 0 .2rem;
+    margin: 1rem 0 0 .2rem;
     span{
-        margin-top: 1.5rem; display: block; margin-left: 0.1rem;
+        margin-top: 1.5rem; margin-left: 0.1rem;
+        display: block; 
         height: .5rem; width: 7rem; 
         background: #5684FD;
     }
     h3{
         margin-top: 2rem;
-        font-size: 1.8rem ;  color: #505D7D; font-weight: normal;
+        font-size: 1.8rem; font-weight: normal;  color: #505D7D;
     }
     div{
         margin-top: 1rem;
-        font-size: 1.5rem; color: #777; line-height: 2.2rem;
+        line-height: 2.2rem;
+        font-size: 1.5rem; color: #777; 
     }
 }
 

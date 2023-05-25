@@ -4,8 +4,10 @@
         &:first-child{
             border-top: 1px solid #ddd;
         }
-        background: #F5F7FA; transition: all .5s;
-        height: 8rem; border-bottom: 1px solid #ddd;
+        height: 8rem; 
+        background: #F5F7FA; 
+        border-bottom: 1px solid #ddd;
+        transition: all .5s;
         a{
             transition: all .5s;
         }
@@ -33,21 +35,27 @@
                     margin-top: .5rem;
                     display: flex; align-items: center; 
                     span{
-                        font-size: 1.4rem; color: #000; font-weight: 400; 
+                        font-size: 1.4rem; font-weight: 400; color: #000;
                     }
                     div{
                         a{
                             margin: 0 .5rem;
-                            font-size: 1.4rem; color: #777; font-weight: 400;
+                            font-size: 1.4rem; font-weight: 400; color: #777;
                             &:hover{
                                 color: #5684FD;
                             }
                         }
                     }
                     .comments{
-                        position: relative; display: block; margin-left: 1rem; padding-left: .5rem;
+                        position: relative; 
+                        margin-left: 1rem; padding-left: .5rem;
+                        display: block; 
                         &::before{
-                            content: ''; position: absolute; left: -3px; top: 50%; transform: translateY(-50%); width: 1px; height: 1.2rem; background: #777;
+                            content: ''; 
+                            position: absolute; left: -3px; top: 50%; 
+                            width: 1px; height: 1.2rem; 
+                            background: #777;
+                            transform: translateY(-50%); 
                         }
                     }
                 }
@@ -56,15 +64,14 @@
     }
 }
 
-
-
 @media all and (max-width:1260px) {
     .listWrap{
         padding: 0 3rem; box-sizing: border-box;
         .itemContainer{
             .itemWrap{
                 .itemInfo{
-                    width: 90%; margin-left: 0;
+                    margin-left: 0;
+                    width: 90%; 
                 }
             }
         }
@@ -74,14 +81,18 @@
 @media all and (max-width:900px) {
     .listWrap{
         .itemContainer{
-            height: 8rem; border-bottom: 1px solid #ddd;
+            height: 8rem; 
+            border-bottom: 1px solid #ddd;
             .itemWrap{
                 .itemInfo{
                     &TitleWrap{
                         p{
                             a{
-                                display: block; font-size: 1.7rem;
-                                width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap ;
+                                overflow: hidden; 
+                                display: block; 
+                                width: 100%; 
+                                text-overflow: ellipsis; white-space: nowrap ;
+                                font-size: 1.7rem;
                             }
                         }
                     }
@@ -132,7 +143,8 @@
 @media all and (max-width:400px) {
     .listWrap{
         .itemContainer{
-            height: 6rem; padding: .5rem 0;
+            padding: .5rem 0;
+            height: 6rem; 
             &.ask{
                 height: 7rem; 
             }
@@ -155,13 +167,11 @@
     }
 }
 
-
 @media all and (max-width:360px) {
     .listWrap{
         margin: 2.5rem auto 0;
     }
 }
-
 
 @media all and (max-width:340px) {
     .listWrap{

@@ -1,16 +1,17 @@
 .commentWrap{
     margin: 3rem 0 5rem;
     .mainComments{
-        display: flex; color: #505D7D; align-items: center;
+        display: flex; align-items: center;
+        color: #505D7D; 
         h2{
-            font-size: 2.3rem; margin-right: .5rem; font-weight: normal;
+            margin-right: .5rem; 
+            font-size: 2.3rem; font-weight: normal;
         }
         span{
             position: relative; top: .1rem;
             font-size: 1.8rem; 
         }
     }
-    
 }
 
 @media all and (max-width:1260px) {
@@ -26,8 +27,7 @@
 
 @media all and (max-width:500px) {
     .commentWrap{
-        margin: 2rem 0 5rem;
-        padding: 0 2rem;
+        margin: 2rem 0 5rem; padding: 0 2rem;
         div{
             h2{
                 font-size: 2rem;

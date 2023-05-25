@@ -1,7 +1,9 @@
 .listContainer{
-    height: 10rem; background: #F5F7FA;
+    height: 10rem; 
+    background: #F5F7FA;
     ul{
-        height: 100%; display: flex; align-items: center; justify-content: center;
+        display: flex; align-items: center; justify-content: center;
+        height: 100%; 
         li{
             &.prevBtn{
                 margin-right: 1rem;
@@ -10,21 +12,21 @@
                 margin-left: 1rem;
             }
             button{
-                color: #505D7D;
-                cursor: pointer; background: none; font-size: 1.8rem;
-                transition: all .5s;
+                background: none; 
+                font-size: 1.8rem; color: #505D7D;
+                cursor: pointer; transition: all .5s;
                 &:hover{
                     color: #5684FD;
                 }
             }
             a{
+                margin: 0 .5rem;
                 display: flex; justify-content: center; align-items: center;
                 width: 4rem; height: 4rem; 
                 background: none;
                 border-radius: 4px;
-                margin: 0 .5rem;
-                font-size: 1.8rem; font-weight: 400; color: #697694; cursor: pointer;
-                transition: all .5s;
+                font-size: 1.8rem; font-weight: 400; color: #697694; 
+                cursor: pointer; transition: all .5s;
                 &:hover{
                     background: rgba(105, 118, 148, 0.1);
                 }
@@ -41,8 +43,6 @@
         height: 8rem;
     }
 }
-
-
 
 @media all and (max-width:500px) {
     .listContainer{

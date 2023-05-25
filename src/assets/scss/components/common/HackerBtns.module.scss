@@ -1,6 +1,8 @@
 .btnWrap{
-    position: fixed; right: 3%; bottom: 5%; background: #fff; border-radius: 4px;
+    position: fixed; right: 3%; bottom: 5%; 
     width: 7rem;
+    background: #fff; 
+    border-radius: 4px;
     .remoteWrap{
         height: 5rem;
         display: flex; align-items: center; justify-content: center; flex-direction: column;
@@ -11,8 +13,9 @@
                 font-size: 1.8rem;
             }
             button{
-                margin: 0 .5rem; font-size: 1.5rem;
-                background: none; color: #000;
+                margin: 0 .5rem; 
+                background: none; 
+                font-size: 1.5rem; color: #000;
                 cursor: pointer;
                 &.disable{
                     color: rgb(161, 161, 161);
