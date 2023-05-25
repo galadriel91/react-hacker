@@ -9,12 +9,21 @@ const HackerHeader = () => {
 	const [isCheck, setIsCheck] = useState(false);
 
 	const onClickOffBar = useCallback(() => {
+		document.body.classList.remove('on');
 		setIsCheck(false);
 	}, []);
 
 	const onClickBars = useCallback(() => {
+		document.body.classList.toggle('on');
 		setIsCheck(!isCheck);
 	}, [isCheck]);
+
+	window.addEventListener('resize', () => {
+		if (window.innerWidth > 1260) {
+			document.body.classList.remove('on');
+			setIsCheck(false);
+		}
+	});
 
 	return (
 		<header className={location.pathname === '/' ? '' : Style.notMain}>
@@ -67,7 +76,14 @@ const HackerHeader = () => {
 							</Link>
 						</li>
 						<li>
-							<button className={Style.login}>Login</button>
+							<a
+								href="https://news.ycombinator.com/login?goto=news"
+								target="_blank"
+								className={Style.login}
+								rel="noreferrer"
+							>
+								Login
+							</a>
 						</li>
 					</ul>
 				</nav>

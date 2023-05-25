@@ -28,7 +28,9 @@ const MainHero = () => {
 						<br className={Style.nomal} />
 						anytime, anywhere.
 					</p>
-					<a href="https://news.ycombinator.com/login?goto=news">Sign Up</a>
+					<a href="https://news.ycombinator.com/login?goto=news" target="_blank" rel="noreferrer">
+						Sign Up
+					</a>
 				</div>
 			</div>
 			<img className="loadingimg" src={mainBg} alt="이미지" onLoad={loadImage} />

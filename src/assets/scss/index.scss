@@ -12,6 +12,9 @@ html{
 }
 
 body{
+    &.on{
+        overflow: hidden;
+    }
     overflow-x: hidden; 
     box-sizing: border-box;
     background: #F5F7FA;
